@@ -10,7 +10,7 @@ STARS_FILE="game_state/stars.txt"
 CODE_EAU="game_state/code_eau.txt"
 
 # barème
-LIMITE=900
+LIMITE=900 #(15 minutes)
 THREE_STAR_MAX=90
 TWO_STAR_MAX=180
 PENALITE=15
