@@ -15,7 +15,7 @@ STARS_FILE="$STATE_DIR/stars.txt"
 clear
 echo ""
 echo "PORTE FINALE — LE SANCTUAIRE DES QUATRE"
-echo "Rassemble les chiffres gravés par chaque élément dans l'ordre : FEU, EAU, AIR, TERRE."
+echo "Rassemble les codes secret de chaque élément dans l'ordre : FEU, EAU, AIR, TERRE."
 echo ""
 
 # collecter les chiffres
@@ -33,8 +33,8 @@ done
 
 # éléments manquants
 if (( ${#missing[@]} > 0 )); then
-  echo "❌ Il te manque encore des épreuves : ${missing[*]}"
-  echo "➡️  Termine-les, puis reviens ouvrir la porte."
+  echo "Il te manque encore des épreuves : ${missing[*]}"
+  echo "Termine-les, puis reviens ouvrir la porte."
   exit 1
 fi
 
