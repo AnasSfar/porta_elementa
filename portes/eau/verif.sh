@@ -64,6 +64,14 @@ fi
 # chiffre aléatoire
 digit=$(( RANDOM % 10 ))
 
+#étoiles
+# score
+total=$(( temps + errors * PENALITE ))
+if   (( total <= THREE_STAR_MAX )); then stars=3; echo " L’eau obéit à ta volonté. Elle reflète la pureté de ton esprit."
+elif (( total <= TWO_STAR_MAX ));  then stars=2; echo " Tu as maîtrisé le flot, mais il reste quelques remous."
+else                                stars=1; echo " Tu as purifié l’eau, mais la maîtrise t’échappe encore."
+fi
+
 # sauvegarde
 mkdir -p game_state
 echo "EAU:$stars" >> "$STARS_FILE"
@@ -74,12 +82,7 @@ echo " Temps écoulé : ${temps}s (+${errors}×${PENALITE}s de remous) → total
 echo " Étoiles : ${stars}"
 
 
-# score
-total=$(( temps + errors * PENALITE ))
-if   (( total <= THREE_STAR_MAX )); then stars=3; echo " L’eau obéit à ta volonté. Elle reflète la pureté de ton esprit."
-elif (( total <= TWO_STAR_MAX ));  then stars=2; echo " Tu as maîtrisé le flot, mais il reste quelques remous."
-else                                stars=1; echo " Tu as purifié l’eau, mais la maîtrise t’échappe encore."
-fi
+
 
 echo "Code secret de l’EAU : ${digit}"
 echo ""
