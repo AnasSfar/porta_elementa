@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
+# Création du labyrinthe 
+rm -rf "$lab"
+mkdir -p "$lab"/{source/{ruisseau,riviere},ocean/{atlantique,pacifique},delta/{bras1,bras2}}
+
 clear
 echo ""
 echo "PORTE DE L'EAU — ÉPREUVE 2"
@@ -23,10 +27,6 @@ echo ""
 echo ""
 echo "Tu disposes de 15 minutes avant que le flot ne s’assèche."
 sleep 3
-
-# ─── Création du labyrinthe ──────────────────────────
-rm -rf "$lab"
-mkdir -p "$lab"/{source/{ruisseau,riviere},ocean/{atlantique,pacifique},delta/{bras1,bras2}}
 
 # ─── Choix aléatoire de l’endroit où cacher la source ─
 mapfile -t dirs < <(find "$lab" -type d -mindepth 1)
