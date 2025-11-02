@@ -32,16 +32,24 @@ lab="lab_feu"
 rm -rf "$lab"
 mkdir -p "$lab"/{combustible/{bois,papier},comburant/{air,oxygene},energie/{etincelle,friction}}
 
-# énigme
-dossiers=($(find "$lab" -mindepth 1 -type d))
-fichier="${dossiers[$RANDOM % ${#dossiers[@]}]}/flamme.txt"
+# --- Liste des énigmes ---
+enigmes=(
+$'Je suis née du feu, morte dans la lumière, vivante dans la poussière.\nJe garde le souvenir de la flamme éteinte.\nQui suis-je ?'
+$'Je jaillis d’un frottement, d’un choc ou d’un hasard.\nMinuscule, je peux pourtant tout embraser.\nQui suis-je ?'
+$'Je fais naître le feu en le nourrissant,\nmais trop de moi, et il meurt.\nQui suis-je ?'
+$'Je ne brûle pas, mais j’annonce l’incendie.\nQuand je parle, c’est souvent trop tard.\nQui suis-je ?'
+$'Je tombe du ciel et j’éteins la flamme.\nParfois je sauve, parfois j’efface.\nQui suis-je ?'
+)
 
-enigme="Je reste quand tout brûle. Qui suis-je ?"
-bonne="cendre"
+reponses=("cendre" "etincelle" "air" "alarme" "pluie")
 
+# tirage aléatoire
+i=$(( RANDOM % ${#enigmes[@]} ))
+enigme="${enigmes[$i]}"
+bonne="${reponses[$i]}"
 
-# écriture
-echo "$enigme" > "$fichier"
+# état
+printf "%b\n" "$enigme" > "$fichier"
 echo "$bonne"   > "$state_dir/expected_answer.txt"
 echo "$fichier" > "$state_dir/riddle_path.txt"
 echo "$lab"     > "$state_dir/lab_root.txt"
