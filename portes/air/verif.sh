@@ -36,7 +36,7 @@ temps=$(( now_s - start_s ))
 target="$lab_root/brise/air.txt"
 
 echo ""
-echo "Vérification du souffle..."
+echo "Vérification du souffle... "
 
 if [[ ! -d "$lab_root/brise" ]]; then
   echo "Aucun passage 'brise' trouvé dans $lab_root."
