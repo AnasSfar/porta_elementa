@@ -17,7 +17,7 @@ PENALITE=15
 
 # --- vérifications de base ---
 for f in "$LAB_ROOT_FILE" "$START_HMS_FILE" "$EXPECTED_PHRASE_FILE"; do
-  [[ -f "$f" ]] || { echo "🌬️  L'air reste silencieux... Lance d'abord ./air.sh"; exit 1; }
+  [[ -f "$f" ]] || { echo "L'air reste silencieux... Lance d'abord ./air.sh"; exit 1; }
 done
 
 lab_root="$(<"$LAB_ROOT_FILE")"
@@ -64,6 +64,13 @@ total=$(( temps + files_extra * PENALITE ))
 
 # --- symbole aléatoire ---
 symbol=$(( RANDOM % 10 ))
+
+#étoiles 
+if   (( total <= THREE_STAR_MAX )); then stars=3; msg="L’air chante en harmonie parfaite."
+elif (( total <= TWO_STAR_MAX ));  then stars=2; msg="La brise souffle juste, mais hésite encore."
+else                                stars=1; msg="Le vent t’écoute, mais reste instable."
+fi
+
 mkdir -p game_state
 echo "AIR:${stars}" >> "$STARS_FILE"
 echo "$symbol" > "$CODE_FILE"
@@ -73,10 +80,7 @@ echo ""
 echo "Le vent est libre."
 echo "Temps : ${temps}s "
 echo "Étoiles obtenues : ${stars}"
-if   (( total <= THREE_STAR_MAX )); then stars=3; msg="L’air chante en harmonie parfaite."
-elif (( total <= TWO_STAR_MAX ));  then stars=2; msg="La brise souffle juste, mais hésite encore."
-else                                stars=1; msg="Le vent t’écoute, mais reste instable."
-fi
+
 echo "Code secret de l’AIR : ${symbol}"
 echo ""
 echo "$msg"
