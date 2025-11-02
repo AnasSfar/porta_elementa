@@ -10,7 +10,7 @@ STARS_FILE="game_state/stars.txt"
 CODE_EAU="game_state/code_air.txt"
 
 # barème
-LIMITE=1230
+LIMITE=1230 #20 min
 THREE_STAR_MAX=300
 TWO_STAR_MAX=600
 PENALITE=15
