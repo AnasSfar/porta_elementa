@@ -56,7 +56,7 @@ Quand ton chant est complet, lance : ./verif_air.sh
 TXT
 
 # indice caché après NORD
-echo "Le vent descend vers le SUD. Lis sud.txt" > "$lab/.indice.txt"
+echo "Le vent descend vers le sud." > "$lab/.indice.txt"
 
 # etat pour verif
 echo "$lab" > "$state_dir/lab_root.txt"
