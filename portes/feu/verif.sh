@@ -62,6 +62,12 @@ fi
 # chiffre aléatoire
 digit=$(( RANDOM % 10 ))
 
+#étoiles
+total=$(( temps + errors * PENALITE ))
+if   (( total <= THREE_STAR_MAX )); then stars=3; msg="🔥 Tu as dansé avec la flamme sans te brûler."
+elif (( total <= TWO_STAR_MAX ));  then stars=2; msg="🔥 Le feu t'obéit, mais son souffle te dépasse encore."
+else                                stars=1; msg="🔥 Tu as vaincu la flamme, mais à quel prix..."
+fi
 # enregistrement
 mkdir -p game_state
 echo "FEU:$stars" >> "$STARS_FILE"
@@ -73,11 +79,6 @@ echo " Temps : ${temps}s"
 echp " Vous avez commis ${errors} erreurs. "
 echo " Vous avez gagnez ${stars} étoiles lors de cette épreuve "
 # score et étoiles
-total=$(( temps + errors * PENALITE ))
-if   (( total <= THREE_STAR_MAX )); then stars=3; msg="🔥 Tu as dansé avec la flamme sans te brûler."
-elif (( total <= TWO_STAR_MAX ));  then stars=2; msg="🔥 Le feu t'obéit, mais son souffle te dépasse encore."
-else                                stars=1; msg="🔥 Tu as vaincu la flamme, mais à quel prix..."
-fi
 echo " Votre code secret est : ${digit}"
 echo ""
 sleep 1
