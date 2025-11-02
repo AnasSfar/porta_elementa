@@ -33,7 +33,7 @@ TXT
 cat > "$lab/sud.txt" <<'TXT'
 [SUD]
 L’air est brûlant ici.
-Crée-lui un passage plus frais nommé « brise », puis cherche plus loin vers l’EST.
+Crée-lui un passage (un dossier) plus frais nommé « brise », puis cherche plus loin vers l’EST.
 TXT
 
 cat > "$lab/est.txt" <<'TXT'

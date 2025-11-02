@@ -16,7 +16,7 @@ TWO_STAR_MAX=600
 PENALITE=15
 
 # --- vérifications de base ---
-for f in "$LAB_ROOT_FILE" "$START_HMS_FILE" "$EXPECTED_PHRASE_FILE"; do
+for f in "$LAB_ROOT_FILE" "$START_HMS_FILE" "$EXPECTED_PUR_FILE"; do
   [[ -f "$f" ]] || { echo "L'air reste silencieux... Lance d'abord ./air.sh"; exit 1; }
 done
 
