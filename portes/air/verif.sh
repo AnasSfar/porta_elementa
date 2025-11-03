@@ -76,7 +76,6 @@ echo "$symbol" > "$CODE_FILE"
 echo ""
 echo "Le vent est libre."
 echo "Temps : ${temps}s "
-echo "Nombre d'erreurs : ${erreurs}"
 echo "Étoiles obtenues : ${stars}"
 
 echo "Code secret de l’AIR : ${symbol}"
