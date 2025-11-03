@@ -24,7 +24,8 @@ echo "  🔸 Crée à la racine un fichier dont le nom = la réponse."
 echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test" . " 
 echo ""
 sleep 2
-# option d’abandon
+
+# option OUT initial
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
 if [[ "${choix,,}" == "out" ]]; then
   echo ""
@@ -33,6 +34,7 @@ if [[ "${choix,,}" == "out" ]]; then
   exit 0
 fi
 
+echo "🌀 À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt"
 echo " Attention, tu as seulement 10 minutes à partir de maintenant. "
 
 # labyrinthe
@@ -69,3 +71,15 @@ echo "$lab"     > "$state_dir/lab_root.txt"
 
 echo " Racine : $lab"
 echo " Bonne chance !"
+
+# fichier OUT
+while true; do
+  if [[ -f "$lab/OUT.txt" ]]; then
+    echo ""
+    echo "Tu as choisi de quitter... la flamme s’éteint doucement."
+    echo "Épreuve du FEU abandonnée."
+    rm -f "$lab/OUT.txt" 
+    exit 0
+  fi
+  sleep 2
+done
