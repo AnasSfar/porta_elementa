@@ -22,10 +22,18 @@ echo "  🔸 Cherche le fichier flamme.txt caché dans le labyrinthe."
 echo "  🔸 Lis l’énigme."
 echo "  🔸 Crée à la racine un fichier dont le nom = la réponse."
 echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test" . " 
-echo " Attention, tu as seulement 10 minutes à partir de maintenant. "
-echo "Tape OUT pour abandonner."
 echo ""
 sleep 2
+# option d’abandon
+read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
+if [[ "${choix,,}" == "out" ]]; then
+  echo ""
+  echo "💨 Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "🔥 Épreuve du FEU abandonnée."
+  exit 0
+fi
+
+echo " Attention, tu as seulement 10 minutes à partir de maintenant. "
 
 # labyrinthe
 lab="lab_feu"
