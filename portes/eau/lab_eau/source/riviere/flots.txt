@@ -1,0 +1,3 @@
+L’eau est troublée. Tu dois la purifier.
+Garde seulement les lignes SANS le mot « sel » (insensible à la casse).
+Fichier à filtrer (chemin relatif depuis la racine) : ocean/atlantique/source.txt
