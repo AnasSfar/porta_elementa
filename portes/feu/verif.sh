@@ -29,8 +29,8 @@ candidate="$lab_root/$expected"
 #out
 OUT_FLAG="$lab_root/OUT.txt"
 if [[ -f "$OUT_FLAG" ]]; then
-  echo "💨 Abandon détecté : $OUT_FLAG"
-  echo "🔥 Épreuve interrompue proprement. Tu pourras la relancer plus tard."
+  echo "Abandon détecté : $OUT_FLAG"
+  echo "Épreuve interrompue proprement. Tu pourras la relancer plus tard."
   rm -f "$OUT_FLAG"   
   exit 0
 fi
