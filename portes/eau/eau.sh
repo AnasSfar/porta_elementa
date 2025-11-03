@@ -2,6 +2,7 @@
 set -euo pipefail
 
 # Création du labyrinthe 
+lab="lab_eau"
 rm -rf "$lab"
 mkdir -p "$lab"/{source/{ruisseau,riviere},ocean/{atlantique,pacifique},delta/{bras1,bras2}}
 
@@ -14,11 +15,11 @@ echo "Les flots s'agitent doucement alors que tu approches."
 echo "Une voix fluide résonne dans ton esprit :"
 sleep 2
 echo ""
-echo "   « Voyageur... l’eau te mettra à l’épreuve. »"
-echo "   « Purifie-la des impuretés et rends-lui sa clarté. »"
+echo "  Voyageur... l’eau te mettra à l’épreuve. "
+echo "  Purifie-la des impuretés et rends-lui sa clarté. "
 sleep 2
 echo ""
-echo "RÈGLE :"
+echo "Déroulement  :"
 echo "  ─ Trouve le fichier *flots.txt* caché dans le labyrinthe."
 echo "  ─ Il t’indiquera le chemin d’un fichier *source.txt*."
 echo "  ─ Garde SEULEMENT les lignes sans le mot 'sel' (insensible à la casse)."
