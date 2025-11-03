@@ -34,7 +34,7 @@ if [[ "${choix,,}" == "out" ]]; then
   exit 0
 fi
 
-echo "🌀 À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt"
+echo "À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt puis lancer le scirpt ./verif.sh "
 echo " Attention, tu as seulement 10 minutes à partir de maintenant. "
 
 # labyrinthe
@@ -71,15 +71,3 @@ echo "$lab"     > "$state_dir/lab_root.txt"
 
 echo " Racine : $lab"
 echo " Bonne chance !"
-
-# fichier OUT
-while true; do
-  if [[ -f "$lab/OUT.txt" ]]; then
-    echo ""
-    echo "Tu as choisi de quitter... la flamme s’éteint doucement."
-    echo "Épreuve du FEU abandonnée."
-    rm -f "$lab/OUT.txt" 
-    exit 0
-  fi
-  sleep 2
-done
