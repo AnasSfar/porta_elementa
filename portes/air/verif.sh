@@ -11,9 +11,9 @@ CODE_FILE="game_state/code_air.txt"
 
 # --- barème ---
 LIMITE=1230        # 20 min
-THREE_STAR_MAX=300 # <= 5 min => ★★★
-TWO_STAR_MAX=600   # <=10 min => ★★
-PENALITE=15        # +15 s par fichier en trop dans brise/
+THREE_STAR_MAX=300 
+TWO_STAR_MAX=600   
+PENALITE=15        
 
 # --- vérifications de base ---
 for f in "$LAB_ROOT_FILE" "$START_HMS_FILE" "$EXPECTED_PHRASE_FILE"; do
@@ -61,9 +61,9 @@ files_extra=$(find "$lab_root/brise" -type f ! -name "air.txt" | wc -l)
 total=$(( temps + files_extra * PENALITE ))
 
 # --- étoiles ---
-if   (( total <= THREE_STAR_MAX )); then stars=3; msg="L’air chante en harmonie parfaite."
-elif (( total <= TWO_STAR_MAX ));  then stars=2; msg="La brise souffle juste, mais hésite encore."
-else                                stars=1; msg="Le vent t’écoute, mais reste instable."
+if   (( total <= THREE_STAR_MAX )); then stars=3; 
+elif (( total <= TWO_STAR_MAX ));  then stars=2;
+else                                stars=1;
 fi
 
 # --- symbole aléatoire ---
@@ -76,10 +76,10 @@ echo "$symbol" > "$CODE_FILE"
 echo ""
 echo "Le vent est libre."
 echo "Temps : ${temps}s "
+echo "Nombre d'erreurs : ${erreurs}"
 echo "Étoiles obtenues : ${stars}"
 
 echo "Code secret de l’AIR : ${symbol}"
 echo ""
-echo "$msg"
 echo ""
 echo "Tu peux maintenant passer à l’épreuve suivante : ./terre.sh"
