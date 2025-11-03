@@ -32,6 +32,11 @@ lab="lab_feu"
 rm -rf "$lab"
 mkdir -p "$lab"/{combustible/{bois,papier},comburant/{air,oxygene},energie/{etincelle,friction}}
 
+# placement aléatoire de flamme.txt
+mapfile -t dossiers < <(find "$lab" -mindepth 1 -type d)
+[[ ${#dossiers[@]} -eq 0 ]] && dossiers=("$lab")
+fichier="${dossiers[RANDOM % ${#dossiers[@]}]}/flamme.txt"
+
 # --- Liste des énigmes ---
 enigmes=(
 $'Je suis née du feu, morte dans la lumière, vivante dans la poussière.\nJe garde le souvenir de la flamme éteinte.\nQui suis-je ?'
