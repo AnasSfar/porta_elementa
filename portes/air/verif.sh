@@ -2,12 +2,12 @@
 set -euo pipefail
 
 # chemins
-STATE_DIR=".game_state/air"
+STATE_DIR=".game_states/air"
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_PHRASE_FILE="$STATE_DIR/expected_phrase.txt"
-STARS_FILE="game_state/stars.txt"
-CODE_FILE="game_state/code_air.txt"
+STARS_FILE=".game_states/stars.txt"
+CODE_FILE=".game_states/code_air.txt"
 
 # --- barème ---
 LIMITE=1230        # 20 min
@@ -17,7 +17,7 @@ PENALITE=15
 
 # --- vérifications de base ---
 for f in "$LAB_ROOT_FILE" "$START_HMS_FILE" "$EXPECTED_PHRASE_FILE"; do
-  [[ -f "$f" ]] || { echo "🌬️  L'air reste silencieux... Lance d'abord ./air.sh"; exit 1; }
+  [[ -f "$f" ]] || { echo "L'air reste silencieux... Lance d'abord ./air.sh"; exit 1; }
 done
 
 lab_root="$(<"$LAB_ROOT_FILE")"
@@ -45,31 +45,31 @@ temps=$(( now_s - start_s ))
 target="$lab_root/brise/air.txt"
 
 echo ""
-echo "💨 Vérification du souffle..."
+echo "Vérification du souffle..."
 
 if [[ ! -d "$lab_root/brise" ]]; then
-  echo "❌ Aucun passage 'brise' trouvé dans $lab_root."
-  echo "💡 Le vent a besoin d’un couloir pour circuler."
+  echo "Aucun passage 'brise' trouvé dans $lab_root."
+  echo "Le vent a besoin d’un couloir pour circuler."
   exit 1
 fi
 
 if [[ ! -f "$target" ]]; then
-  echo "❌ Le fichier 'air.txt' est manquant dans le passage 'brise'."
-  echo "💡 Déplace la clé : mv $lab_root/cle.txt $lab_root/brise/air.txt"
+  echo "Le fichier 'air.txt' est manquant dans le passage 'brise'."
+  echo "Déplace la clé : mv $lab_root/cle.txt $lab_root/brise/air.txt"
   exit 1
 fi
 
 if ! grep -qF "$expected" "$target"; then
-  echo "❌ La phrase finale n’est pas correcte."
-  echo "💡 Ajoute exactement : \"$expected\" à la fin du fichier."
+  echo "La phrase finale n’est pas correcte."
+  echo "Ajoute exactement : \"$expected\" à la fin du fichier."
   exit 1
 fi
 
-# --- pénalités: fichiers supplémentaires dans brise/ ---
+# pénalités: fichiers supplémentaires dans brise/ 
 files_extra=$(find "$lab_root/brise" -type f ! -name "air.txt" | wc -l)
 total=$(( temps + files_extra * PENALITE ))
 
-# --- étoiles ---
+# étoiles
 if   (( total <= THREE_STAR_MAX )); then stars=3; 
 elif (( total <= TWO_STAR_MAX ));  then stars=2;
 else                                stars=1;
@@ -77,7 +77,7 @@ fi
 
 # --- symbole aléatoire ---
 symbol=$(( RANDOM % 10 ))
-mkdir -p game_state
+mkdir -p .game_states
 echo "AIR:${stars}" >> "$STARS_FILE"
 echo "$symbol" > "$CODE_FILE"
 
