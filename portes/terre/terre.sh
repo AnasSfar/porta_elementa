@@ -114,9 +114,9 @@ Souffle vert et vie silencieuse.
 EOF
 
 cat > .terre_temp/REDUCE/message.txt <<'EOF'
-REDUCE — Le Poids du Monde
-Le monde ploie sous le poids de l'excès.
-Garde ce qui est vivant, détruis ce qui m'écrase.
+Supprime les fichiers qui représentent la pollution et l’industrie.
+Garde seulement les éléments naturels.
+Quand il ne restera que trois fichiers, passe à l’épreuve suivante : REUSE.
 EOF
 
 # ---------- REUSE ----------
@@ -133,9 +133,9 @@ de l’air pur.
 EOF
 
 cat > .terre_temp/REUSE/message.txt <<'EOF'
-REUSE — Les Fragments de Mémoire
-Mes souvenirs sont dispersés.
-Assemble mes fragments et rends-moi ma voix.
+Il y a trois fichiers contenant des fragments d’une phrase.
+Rassemble-les dans le bon ordre dans un nouveau fichier appelé reuse.txt.
+Quand tu auras fini, passe à l'épreuve RECYCLE.
 EOF
 
 # ---------- RECYCLE ----------
@@ -150,9 +150,9 @@ air pur
 EOF
 
 cat > .terre_temp/RECYCLE/message.txt <<'EOF'
-RECYCLE — La Purification
-Distingue la vie de la corruption.
-Ne garde que ce qui est pur.
+Lis le fichier monde.txt.
+Crée un nouveau fichier appelé recycle.txt contenant uniquement les lignes propres et naturelles.
+Ne garde pas celles qui parlent de pollution ou de déchets.
 EOF
 
 # ---------- Création de l’archive cachée ----------
