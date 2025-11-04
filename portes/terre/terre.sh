@@ -53,7 +53,6 @@ sleep 0.5
 
 type_out "au secourrrs" 0.04
 sleep 0.5
-sleep 5
 
 type_out "Aide moi" 0.05
 sleep 0.5
@@ -81,9 +80,8 @@ sleep 0.8
 type_out "SOS" 0.2
 sleep 0.8
 
-echo ""
-echo ""
-echo ""
+type_out "si tu le trouves... tu sauras où commencer... SOS"
+sleep 1
 
 #début de l'épreuve
 cat > SOS <<'EOF'
@@ -94,3 +92,32 @@ cat > SOS <<'EOF'
 .tneitnoc elle’uq sreihcif sel sil te al-tiartxe
 .elcyceR ,esueR ,ecudeR :sriopse siort sem tnevuort es euq àl tse’c
 EOF
+
+# Création du dossier de travail (facultatif)
+mkdir -p .terre_temp
+
+# Création des 3 fichiers d’épreuve
+cat > .terre_temp/REDUCE.txt <<'EOF'
+Le monde est saturé. Trop de bruit, trop de mots, trop de tout.
+Allège la Terre : garde l’essentiel, supprime le reste.
+Quand tout sera plus léger, la vie reviendra.
+EOF
+
+cat > .terre_temp/REUSE.txt <<'EOF'
+Rien n’est jamais vraiment perdu.
+Réassemble, réutilise, reconstruis.
+Ce qui était brisé peut encore respirer.
+EOF
+
+cat > .terre_temp/RECYCLE.txt <<'EOF'
+La Terre renaît de ce qu’on choisit de préserver.
+Rassemble ce qui est pur, écarte ce qui corrompt.
+Recycle pour me redonner forme.
+EOF
+
+# Création de l’archive cachée 
+tar -cf .terre_hidden.tar -C .terre_temp REDUCE.txt REUSE.txt RECYCLE.txt
+
+# Nettoyage du dossier temporaire
+rm -rf .terre_temp
+
