@@ -18,7 +18,7 @@ PENALITE=15
 # fonctions utilitaires
 hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600+10#$m*60+10#$s)); }
 
-# vérifs fichiers
+# vérif fichiers
 [[ -f "$EXPECTED_FILE" && -f "$LAB_ROOT_FILE" ]] || { echo "⚠️ Lance d'abord l'épreuve du FEU."; exit 1; }
 
 # lecture
@@ -35,7 +35,7 @@ if [[ -f "$OUT_FLAG" ]]; then
   exit 0
 fi
 
-# erreurs (fichiers à la racine ≠ bonne réponse)
+# erreurs 
 total_files=$(find "$lab_root" -maxdepth 1 -type f | wc -l)
 if [[ -f "$candidate" ]]; then
   errors=$(( total_files > 0 ? total_files - 1 : 0 ))
