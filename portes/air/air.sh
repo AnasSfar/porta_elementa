@@ -1,8 +1,9 @@
 #!/bin/bash
 set -euo pipefail
-STATE_DIR="$HOME/.porta_elementa/feu"
+state_dir="$HOME/.porta_elementa/feu"
 lab="lab_air"
 mkdir -p "$state_dir"
+
 date +%H:%M:%S > "$state_dir/depart.txt"
 
 clear

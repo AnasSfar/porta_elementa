@@ -1,4 +1,0 @@
-[EST]
-Un passage existe, mais la clé du vent n’y est pas encore.
-Déplace la clé (cle.txt) dans le couloir « brise » et renomme-la « air.txt ».
-Quand ce sera fait, le vent te parlera à l’OUEST.

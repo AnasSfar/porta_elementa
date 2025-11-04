@@ -1,5 +1,0 @@
-[OUEST]
-Dernière étape : transforme l’air lui-même.
-Ouvre « lab_air/brise/air.txt » et ajoute à la fin la phrase exacte :
-Le vent est libre.
-Quand ton chant est complet, lance : ./verif_air.sh

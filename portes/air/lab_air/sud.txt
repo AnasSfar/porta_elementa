@@ -1,3 +1,0 @@
-[SUD]
-L’air est brûlant ici.
-Crée-lui un passage (un dossier) plus frais nommé « brise », puis cherche plus loin vers l’EST.

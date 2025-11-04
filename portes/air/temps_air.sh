@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-STATE_DIR="$HOME/.porta_elementa/air"
+state_dir="$HOME/.porta_elementa/air"
 depart_file="$state_dir/depart.txt"
 limite=600  # 10 minutes
 
