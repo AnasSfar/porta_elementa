@@ -24,6 +24,15 @@ lab_root="$(<"$LAB_ROOT_FILE")"
 expected="$(<"$EXPECTED_PHRASE_FILE")"
 start_time="$(<"$START_HMS_FILE")"
 
+#out
+OUT_FLAG="$lab_root/OUT.txt"
+if [[ -f "$OUT_FLAG" ]]; then
+  echo "Abandon détecté : $OUT_FLAG"
+  echo "Épreuve interrompue proprement. Tu pourras la relancer plus tard."
+  rm -f "$OUT_FLAG"   
+  exit 0
+fi
+
 # --- conversion HH:MM:SS -> secondes ---
 hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600 + 10#$m*60 + 10#$s)); }
 

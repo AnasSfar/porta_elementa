@@ -10,6 +10,8 @@ clear
 echo ""
 echo "PORTE DE L'AIR — ÉPREUVE 3"
 echo ""
+echo "À tout moment, tu peux quitter en créant le fichier : lab_air/OUT.txt puis lancer le scirpt ./verif.sh "
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_air.sh "
 echo "Cher voyaguer, le vent est prisonnier d’un labyrinthe invisible."
 echo "Lis les couloirs dans l’ordre indiqué par les indices et libère-le."
 echo ""
