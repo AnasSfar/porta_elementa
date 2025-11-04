@@ -7,7 +7,7 @@ debut=$(date +%s)
 # dossiers
 state_dir="game_state/feu"
 mkdir -p "$state_dir"
-date +%H:%M:%S > "$state_dir/depart.txt"
+
 
 # intro
 clear
@@ -16,14 +16,17 @@ echo ""
 echo "Bienvenue, voyageur..."
 echo "Tu viens d’ouvrir la Porte du Feu."
 echo ""
-sleep 2
+sleep 3
 echo "Déroulement du jeu :"
 echo "  🔸 Cherche le fichier flamme.txt caché dans le labyrinthe."
+sleep 2
 echo "  🔸 Lis l’énigme."
+sleep 2
 echo "  🔸 Crée à la racine un fichier dont le nom = la réponse."
+sleep 2
 echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test" . " 
 echo ""
-sleep 2
+sleep 3
 
 # option OUT initial
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
@@ -34,8 +37,13 @@ if [[ "${choix,,}" == "out" ]]; then
   exit 0
 fi
 
+sleep 2
+
 echo "À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt puis lancer le scirpt ./verif.sh "
-echo " Attention, tu as seulement 10 minutes à partir de maintenant. "
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
+sleep 2
+echo " Attention, tu as 10 minutes à partir de maintenant. "
+date +%H:%M:%S > "$state_dir/depart.txt"
 
 # labyrinthe
 lab="lab_feu"
