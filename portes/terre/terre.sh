@@ -42,12 +42,6 @@ sleep 0.5
 type_out "détruit" 0.06
 sleep 0.5
 
-type_out "Aide moi" 0.05
-sleep 0.5
-
-type_out "SOS" 0.2
-sleep 0.8
-
 type_out "L'homme m'a ren/inversé avec ses actions..." 0.04
 sleep 0.5
 type_out "Trop de CO2..." 0.05
@@ -61,14 +55,42 @@ type_out "au secourrrs" 0.04
 sleep 0.5
 sleep 5
 
+type_out "Aide moi" 0.05
+sleep 0.5
+
+type_out "..."
+sleep 0.8
+type_out "j’ai... essayé de parler..."
+sleep 1
+type_out "mais ma voix se perd... dans les signaux..."
+sleep 1.2
+type_out "il reste un... message..."
+sleep 1.5
+type_out "quelque part... dans le bruit..."
+sleep 1.3
+
+type_out "SOS" 0.2
+sleep 0.8
+
+type_out "SOS" 0.2
+sleep 0.8
+
+type_out "SOS" 0.2
+sleep 0.8
+
+type_out "SOS" 0.2
+sleep 0.8
+
 echo ""
 echo ""
 echo ""
 
 #début de l'épreuve
-echo ".etiurTéd a’m emmoh’l
-.erreA al sius eJ
-.Revuas em erocne xuep ut
-.eiuofne ia’j euq eéhcac evihcra’l ehcrehc ,alec ruop
-.tneitnoc elle’uq sreihcif sel sil te al-tiar txe
-.elcycer ,esuer ,ecuder :sriopse siort sem tnevuort es euq àl tse’c"
+cat > SOS <<'EOF'
+.etiurTéd a’m emmoh’l
+.erreT al sius eJ
+.revuas em erocne xuep uT
+.eiuofne ia’j euq eéhcac evihcRa’l ehcrehc ,alec ruop
+.tneitnoc elle’uq sreihcif sel sil te al-tiaRtxe
+.elcyceR ,esueR ,ecudeR :sriopse siort sem tnevuort es euq àl tse’C
+EOF
