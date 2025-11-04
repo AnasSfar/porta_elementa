@@ -5,7 +5,7 @@ set -euo pipefail
 debut=$(date +%s)
 
 # dossiers
-state_dir="game_state/feu"
+state_dir=".game_state/feu"
 mkdir -p "$state_dir"
 
 
@@ -80,4 +80,3 @@ echo "$lab"     > "$state_dir/lab_root.txt"
 echo " Racine : $lab"
 echo " Bonne chance !"
 
-chmod -R 700 .game_state
