@@ -88,9 +88,9 @@ echo ""
 #début de l'épreuve
 cat > SOS <<'EOF'
 .etiurTéd a’m emmoh’l
-.erreT al sius eJ
-.revuas em erocne xuep uT
+.erret al sius ee
+.revuaAs em erocne xuep ut
 .eiuofne ia’j euq eéhcac evihcRa’l ehcrehc ,alec ruop
-.tneitnoc elle’uq sreihcif sel sil te al-tiaRtxe
-.elcyceR ,esueR ,ecudeR :sriopse siort sem tnevuort es euq àl tse’C
+.tneitnoc elle’uq sreihcif sel sil te al-tiartxe
+.elcyceR ,esueR ,ecudeR :sriopse siort sem tnevuort es euq àl tse’c
 EOF
