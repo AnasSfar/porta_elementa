@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-state_dir=".game_states/air"
+state_dir=".game_state/air"
 depart_file="$state_dir/depart.txt"
 limite=600  # 10 minutes
 

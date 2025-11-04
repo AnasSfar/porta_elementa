@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # chemins
-STATE_DIR=".game_states/air"
+STATE_DIR="$HOME/.porta_elementa/air"
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_PHRASE_FILE="$STATE_DIR/expected_phrase.txt"
@@ -77,7 +77,7 @@ fi
 
 # --- symbole aléatoire ---
 symbol=$(( RANDOM % 10 ))
-mkdir -p .game_states
+mkdir -p .game_state
 echo "AIR:${stars}" >> "$STARS_FILE"
 echo "$symbol" > "$CODE_FILE"
 

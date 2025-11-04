@@ -3,7 +3,7 @@ set -euo pipefail
 
 state_dir=".game_state/feu"
 depart_file="$state_dir/depart.txt"
-limite=600  # 10 minutes
+limite=630  # 10 minutes
 
 if [[ ! -f "$depart_file" ]]; then
   echo "⚠️  Aucune épreuve du FEU en cours ou non commencée."
