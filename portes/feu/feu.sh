@@ -79,3 +79,5 @@ echo "$lab"     > "$state_dir/lab_root.txt"
 
 echo " Racine : $lab"
 echo " Bonne chance !"
+
+chmod -R 700 .game_state
