@@ -1,0 +1,3 @@
+[NORD]
+Le vent se cache dans les ombres.
+Révèle ce qui est invisible dans ce dossier pour entendre son premier souffle = ton premier indice.

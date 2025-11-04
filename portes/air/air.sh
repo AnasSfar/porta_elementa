@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-state_dir="$HOME/.porta_elementa/feu"
+state_dir="$HOME/porta_elementa/.game_state/air"
 lab="lab_air"
 mkdir -p "$state_dir"
 
