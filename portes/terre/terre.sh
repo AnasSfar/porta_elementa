@@ -8,10 +8,6 @@ debut=$(date +%s)
 state_dir=".game_state/terre"
 mkdir -p "$state_dir"
 
-
-echo " POPRTE DE LA TERRE - EPREUVE 4"
-sleep 2
-
 # Effet machine à écrire
 type_out() {
   text="$1"
@@ -93,31 +89,74 @@ cat > SOS <<'EOF'
 .elcyceR ,esueR ,ecudeR :sriopse siort sem tnevuort es euq àl tse’c
 EOF
 
-# Création du dossier de travail (facultatif)
-mkdir -p .terre_temp
+# Création du dossier de travail (temporaire)
+mkdir -p .terre_temp/REDUCE .terre_temp/REUSE .terre_temp/RECYCLE
 
-# Création des 3 fichiers d’épreuve
-cat > .terre_temp/REDUCE.txt <<'EOF'
-Le monde est saturé. Trop de bruit, trop de mots, trop de tout.
-Allège la Terre : garde l’essentiel, supprime le reste.
-Quand tout sera plus léger, la vie reviendra.
+# ---------- REDUCE ----------
+cat > .terre_temp/REDUCE/montagne.txt <<'EOF'
+Roche ancienne, stable et fière.
 EOF
 
-cat > .terre_temp/REUSE.txt <<'EOF'
-Rien n’est jamais vraiment perdu.
-Réassemble, réutilise, reconstruis.
-Ce qui était brisé peut encore respirer.
+cat > .terre_temp/REDUCE/ocean.txt <<'EOF'
+Profondeur calme et bleue.
 EOF
 
-cat > .terre_temp/RECYCLE.txt <<'EOF'
-La Terre renaît de ce qu’on choisit de préserver.
-Rassemble ce qui est pur, écarte ce qui corrompt.
-Recycle pour me redonner forme.
+cat > .terre_temp/REDUCE/industrie.txt <<'EOF'
+Fumées, machines et métal froid.
 EOF
 
-# Création de l’archive cachée 
-tar -cf .terre_hidden.tar -C .terre_temp REDUCE.txt REUSE.txt RECYCLE.txt
+cat > .terre_temp/REDUCE/plastique.txt <<'EOF'
+Déchets éternels, morts sans fin.
+EOF
 
-# Nettoyage du dossier temporaire
+cat > .terre_temp/REDUCE/foret.txt <<'EOF'
+Souffle vert et vie silencieuse.
+EOF
+
+cat > .terre_temp/REDUCE/message.txt <<'EOF'
+REDUCE — Le Poids du Monde
+Le monde ploie sous le poids de l'excès.
+Garde ce qui est vivant, détruis ce qui m'écrase.
+EOF
+
+# ---------- REUSE ----------
+cat > .terre_temp/REUSE/reused_1.txt <<'EOF'
+Les arbres 
+EOF
+
+cat > .terre_temp/REUSE/reused_2.txt <<'EOF'
+produisent 
+EOF
+
+cat > .terre_temp/REUSE/reused_3.txt <<'EOF'
+de l’air pur.
+EOF
+
+cat > .terre_temp/REUSE/message.txt <<'EOF'
+REUSE — Les Fragments de Mémoire
+Mes souvenirs sont dispersés.
+Assemble mes fragments et rends-moi ma voix.
+EOF
+
+# ---------- RECYCLE ----------
+cat > .terre_temp/RECYCLE/monde.txt <<'EOF'
+forêt pure
+océan propre
+désert pur
+pollution toxique
+glacier clair
+plastique déchet
+air pur
+EOF
+
+cat > .terre_temp/RECYCLE/message.txt <<'EOF'
+RECYCLE — La Purification
+Distingue la vie de la corruption.
+Ne garde que ce qui est pur.
+EOF
+
+# ---------- Création de l’archive cachée ----------
+tar -cf .terre_hidden.tar -C .terre_temp REDUCE REUSE RECYCLE
+
+# ---------- Nettoyage du dossier temporaire ----------
 rm -rf .terre_temp
-
