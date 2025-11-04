@@ -47,12 +47,6 @@ sleep 0.5
 type_out "Tu dois me sauver." 0.04
 sleep 0.5
 
-type_out "au secourrrs" 0.04
-sleep 0.5
-
-type_out "Aide moi" 0.05
-sleep 0.5
-
 type_out "..."
 sleep 0.8
 type_out "j’ai... essayé de parler..."
