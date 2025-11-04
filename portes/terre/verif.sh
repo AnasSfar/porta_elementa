@@ -78,10 +78,6 @@ if [[ "$user_recycle" != "$expected_recycle" ]]; then
   exit 1
 fi
 
-# --- Vérif REDUCE (critère : ne garder que les éléments naturels) ---
-# Ici on valide simplement que les fichiers artificiels n'apparaissent plus dans l'archive finale (validation juste après).
-# Si tu veux un check local, ajoute ta propre règle ici.
-
 # --- Vérif de l'archive finale SAVED au chemin imposé ---
 ARCHIVE="$HOME/Documents/GitHub/Porta-Elementa/portes/terre/SAVED"
 [[ -f "$ARCHIVE" ]] || { echo "Archive finale manquante : $ARCHIVE"; exit 1; }
