@@ -6,7 +6,7 @@ depart_file="$state_dir/depart.txt"
 limite=600  # 10 minutes
 
 if [[ ! -f "$depart_file" ]]; then
-  echo "⚠️  Aucune épreuve du FEU en cours ou non commencée."
+  echo "⚠️  Aucune épreuve en cours ou non commencée."
   exit 1
 fi
 
