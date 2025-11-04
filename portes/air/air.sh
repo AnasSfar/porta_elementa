@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-state_dir="game_state/air"
+state_dir=".game_state/air"
 lab="lab_air"
 mkdir -p "$state_dir"
 date +%H:%M:%S > "$state_dir/depart.txt"
