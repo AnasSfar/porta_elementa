@@ -11,10 +11,11 @@ mkdir -p "$state_dir"
 
 echo " POPRTE DE LA TERRE - EPREUVE 4"
 sleep 2
-# Effet machine à écrire simple
+
+# Effet machine à écrire
 type_out() {
   text="$1"
-  speed=${2:-0.03}  # vitesse par lettre (0.03 = rapide / 0.1 = lent)
+  speed=${2:-0.03}
   for ((i=0; i<${#text}; i++)); do
     echo -n "${text:$i:1}"
     sleep $speed
@@ -35,7 +36,7 @@ sleep 0.5
 type_out "Je Sui-" 0.05
 sleep 0.5
 
-type_out "Je SuiS La TeRRRRe- l'homme m'a" 0.04
+type_out "Je SuiS La TeRRRRe- l'homme m'a-" 0.04
 sleep 0.5
 
 type_out "détruit" 0.06
@@ -47,20 +48,17 @@ sleep 0.5
 type_out "SOS" 0.2
 sleep 0.8
 
-type_out "L'homme m'a renversé avec ses actions..." 0.04
+type_out "L'homme m'a ren/inversé avec ses actions..." 0.04
 sleep 0.5
 type_out "Trop de CO2..." 0.05
 sleep 0.5
 type_out "Trop de méchaaaaanceté..." 0.05
 sleep 0.5
 type_out "Tu dois me sauver." 0.04
+sleep 0.5
 
-#effet réel
-for c in "a" "u" "   " "s" "e" "c" "o" "u" "r" "s" "..." ; do
-  echo -n "$c"
-  sleep 0.1
-done
-echo ""
+type_out "au secourrrs" 0.04
+sleep 0.5
 sleep 5
 
 echo ""
