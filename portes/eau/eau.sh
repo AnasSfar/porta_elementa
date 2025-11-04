@@ -11,6 +11,8 @@ clear
 echo ""
 echo "PORTE DE L'EAU — ÉPREUVE 2"
 sleep 1
+echo "À tout moment, tu peux quitter en créant le fichier : lab_eau/OUT.txt puis lancer le scirpt ./verif.sh "
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_eau.sh "
 echo ""
 echo "Les flots s'agitent doucement alors que tu approches."
 echo "Une voix fluide résonne dans ton esprit :"

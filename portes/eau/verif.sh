@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # chemins
-STATE_DIR="game_state/eau"
+STATE_DIR=".game_state/eau"
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
@@ -29,6 +29,15 @@ player_out="$lab_root/pur.txt"
 echo ""
 echo " Les flots se calment..."
 sleep 1
+
+#out
+OUT_FLAG="$lab_root/OUT.txt"
+if [[ -f "$OUT_FLAG" ]]; then
+  echo "Abandon détecté : $OUT_FLAG"
+  echo "Épreuve interrompue proprement. Tu pourras la relancer plus tard."
+  rm -f "$OUT_FLAG"   
+  exit 0
+fi
 
 # mesure du temps écoulé
 s1=$(hms_to_sec "$(cat "$START_HMS_FILE")")
