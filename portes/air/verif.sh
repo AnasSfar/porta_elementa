@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # chemins
-STATE_DIR="game_state/air"
+STATE_DIR=".game_state/air"
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_PHRASE_FILE="$STATE_DIR/expected_phrase.txt"

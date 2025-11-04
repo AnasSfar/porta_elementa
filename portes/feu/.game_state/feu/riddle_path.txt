@@ -1,1 +1,1 @@
-lab_feu/energie/etincelle/flamme.txt
+lab_feu/comburant/air/flamme.txt
