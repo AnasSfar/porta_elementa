@@ -8,6 +8,7 @@ debut=$(date +%s)
 state_dir=".game_state/terre"
 mkdir -p "$state_dir"
 
+
 # Effet machine à écrire
 type_out() {
   text="$1"
@@ -67,11 +68,10 @@ sleep 0.8
 type_out "SOS" 0.2
 sleep 0.8
 
-type_out "SOS" 0.2
-sleep 0.8
-
 type_out "si tu le trouves... tu sauras où commencer... SOS"
 sleep 1
+
+date +%H:%M:%S > "$state_dir/depart.txt"
 
 #début de l'épreuve
 cat > SOS <<'EOF'
