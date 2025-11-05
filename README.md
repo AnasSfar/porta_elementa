@@ -1,38 +1,16 @@
-# 🌌 Porta Elementa
-> *Un voyage initiatique à travers les quatre éléments : Feu, Eau, Air et Terre.*  
-> *Réunis leurs symboles et ouvre la Porte des Éléments.*
+Bienvenue, voyageur...
 
----
+L'univers est en déséquilibre.
+Les quatre forces — Feu, Eau, Air et Terre — se sont rebellées contre l’ordre ancien.
+Pour restaurer l’harmonie… ou la dominer, tu devras traverser chacun de leurs royaumes.
 
-## 🧭 Concept général
+Chaque épreuve mettra à l’épreuve ton esprit, ton temps et ta maîtrise.
+Réunis les codes secrets des quatre éléments pour activer le Portail,
+et sauver l'univers.
 
-**Porta Elementa** est un jeu textuel en **Bash**, à jouer directement dans le terminal **UNIX/Linux**.  
-
-Clone le projet :
-```bash
-git clone https://github.com/AnasSfar/porta_elementa
-```
-
-Ensuite, accède au dossier du jeu :
-```bash
-cd porta_elementa/portes/elem
-```
-
-Le joueur parcourt quatre épreuves — **Feu**, **Eau**, **Air**, et **Terre**.  
-Il est obligatoire de suivre cet ordre.  
-
-Avant chaque épreuve, rends les scripts exécutables :
-```bash
-chmod +x elem.sh verif.sh
-```
-
-Puis lance :
-```bash
-./elem.sh     # pour commencer l’épreuve
-./verif.sh    # pour vérifier ta réponse
-```
-
-Une description détaillée de l’épreuve s’affichera dès son lancement.  
+Prépare-toi.
+Chaque choix compte.
+Chaque seconde aussi. 
 
 Ta **maîtrise** dépend du **temps** et du **nombre d’erreurs**.  
 Chaque élément te donne un **symbole secret**.  
