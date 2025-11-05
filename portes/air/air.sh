@@ -78,5 +78,3 @@ printf '%s\n' "Le vent est libre." > "$state_dir/expected_phrase.txt"
 
 # depart
 echo "Commence par : cat $lab/nord.txt"
-echo "(Astuce : certains indices sont cachés…)"
-echo ""
