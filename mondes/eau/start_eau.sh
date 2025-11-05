@@ -36,7 +36,7 @@ echo ""
 echo "Déroulement :"
 echo "  • Trouve le fichier flots.txt caché dans le labyrinthe."
 echo "  • Il t’indiquera le chemin d’un fichier source.txt."
-echo "  • Garde SEULEMENT les lignes sans le mot 'sel' (insensible à la casse)."
+echo "  • Garde SEULEMENT les lignes sans le mot 'sel'."
 echo "  • Crée à la racine de '$lab' un fichier nommé pur.txt contenant l’eau filtrée."
 echo ""
 
