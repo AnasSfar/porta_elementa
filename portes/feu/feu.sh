@@ -36,22 +36,16 @@ echo "Tu viens d’ouvrir la Porte du Feu."
 echo ""
 sleep 2
 echo "Déroulement du jeu :"
-echo "  🔸 Cherche le fichier flamme.txt caché dans le labyrinthe."
+echo "  - Cherche le fichier flamme.txt caché dans le labyrinthe."
 sleep 2
-echo "  🔸 Lis l’énigme."
+echo "  - Lis l’énigme."
 sleep 1
-echo "  🔸 Crée à la racine un fichier dont le nom = la réponse."
+echo "  - Crée à la racine un fichier dont le nom = la réponse."
 sleep 2
 echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test" . " 
 echo ""
 sleep 3
-
-
-
 echo ""
-echo " Attention, tu as 10 minutes à partir de maintenant. "
-echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
-sleep 2
 
 # labyrinthe
 lab="lab_feu"
@@ -86,5 +80,7 @@ echo "$fichier" > "$state_dir/riddle_path.txt"
 echo "$lab"     > "$state_dir/lab_root.txt"
 
 echo " Racine : $lab"
-echo " Bonne chance !"
+echo " Attention, tu as 10 minutes à partir de maintenant. "
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
+sleep 2
 
