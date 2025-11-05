@@ -31,7 +31,7 @@ echo ""
 echo ""
 sleep 2
 echo "Bienvenue, voyageur..."
-echo "Tu viens d’ouvrir la Porte du Feu."
+echo "Tu viens de pénétrer le monde du Feu."
 echo ""
 sleep 2
 echo "Déroulement du jeu :"
@@ -41,7 +41,7 @@ echo "  - Lis l’énigme."
 sleep 1
 echo "  - Crée à la racine un fichier dont le nom = la réponse."
 sleep 2
-echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test" . " 
+echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test.txt" . " 
 echo ""
 sleep 3
 echo ""
