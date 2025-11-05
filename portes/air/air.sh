@@ -1,6 +1,10 @@
 #!/bin/bash
 set -euo pipefail
-state_dir="$HOME/porta_elementa/.game_state/air"
+
+PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
+STATE_ROOT="$PROJECT_DIR/.game_state"
+STATE_DIR="$STATE_ROOT/air"
+
 lab="lab_air"
 mkdir -p "$state_dir"
 
