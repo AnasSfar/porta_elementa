@@ -80,8 +80,10 @@ fi
 
 # --- symbole aléatoire ---
 symbol=$(( RANDOM % 10 ))
-echo "AIR:${stars}" >> "$STARS_FILE"
-echo "$symbol" > "$CODE_FILE"
+
+mkdir -p "$STATE_DIR"
+echo "AIR:${stars}" >> "$STARS_AIR"
+echo "$symbol" > "$CODE_AIR"
 
 # --- affichage final ---
 echo ""
