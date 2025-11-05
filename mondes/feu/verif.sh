@@ -104,9 +104,13 @@ sleep 5
 echo "Le feu s'apaise, et la vapeur s'élève dans l'air..."
 sleep 1
 echo "L'EAU t'appelle à présent."
+sleep 0.5
 echo "Pour accéder à l'épreuve suivante :"
-echo "     cd ../  et accède à la porte eau"
+sleep 0.2
+echo "     cd ../  et accède au monde de l'eau"
+sleep 0.2
 echo "     puis lance : ./eau.sh"
+sleep 0.2
 echo ""
-echo "Que ton esprit reste clair pour affronter l’eau."
+echo "Que ton esprit reste clair pour purrifier l’eau."
 echo ""
