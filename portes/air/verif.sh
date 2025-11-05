@@ -4,13 +4,13 @@ set -euo pipefail
 # chemins
 PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 STATE_ROOT="$PROJECT_DIR/.game_state"
-state_dir="$STATE_ROOT/air"
+STATE_DIR="$STATE_ROOT/air"
 
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_PHRASE_FILE="$STATE_DIR/expected_phrase.txt"
-STARS_FILE=".game_states/stars.txt"
-CODE_FILE=".game_states/code_air.txt"
+STARS_FILE="$STATE_DIR/stars.txt"
+CODE_AIR="$STATE_DIR/code_air.txt"
 
 # --- barème ---
 LIMITE=1230        # 20 min
@@ -80,7 +80,6 @@ fi
 
 # --- symbole aléatoire ---
 symbol=$(( RANDOM % 10 ))
-mkdir -p .game_state
 echo "AIR:${stars}" >> "$STARS_FILE"
 echo "$symbol" > "$CODE_FILE"
 
