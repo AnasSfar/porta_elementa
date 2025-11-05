@@ -4,7 +4,7 @@ set -euo pipefail
 # chemins
 PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 STATE_ROOT="$PROJECT_DIR/.game_state"
-STATE_DIR="$STATE_ROOT/air"
+state_dir="$STATE_ROOT/air"
 
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
