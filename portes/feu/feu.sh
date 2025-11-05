@@ -24,6 +24,7 @@ if [[ "${choix,,}" == "out" ]]; then
   echo "Épreuve du FEU abandonnée."
   exit 0
 fi
+
 sleep 2
 echo "À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt puis lancer le scirpt ./verif.sh "
 echo ""
