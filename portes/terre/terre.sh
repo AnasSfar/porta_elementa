@@ -55,13 +55,15 @@ sleep 0.5
 
 type_out "L'homme m'a ren/inversé avec ses actions..." 0.04
 sleep 0.5
+
 type_out "Trop de CO2..." 0.05
 sleep 0.5
+
 type_out "Trop de méchaaaaanceté..." 0.05
 sleep 0.5
+
 type_out "Tu dois me sauver." 0.04
 sleep 0.5
-
 type_out "..."
 sleep 0.8
 type_out "j’ai... essayé de parler..."
@@ -72,23 +74,17 @@ type_out "il reste un... message..."
 sleep 1.5
 type_out "quelque part... dans le bruit..."
 sleep 1.3
-
 type_out "SOS" 0.2
 sleep 0.8
-
 type_out "SOS" 0.2
 sleep 0.8
-
 type_out "SOS" 0.2
 sleep 0.8
-
 type_out "si tu le trouves... tu sauras où commencer... SOS"
 sleep 1
 
 type_out "Tu as 20 minutes pour ... m'aider ..."
 type_out "Tu peux vérifier le temps restant en lançant le script ./temps_terre.sh "
-
-
 date +%H:%M:%S > "$state_dir/depart.txt"
 
 #début de l'épreuve
