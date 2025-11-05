@@ -96,13 +96,14 @@ echo "$temps" > "$TIME_EAU"
 minutes=$(( temps / 60 ))
 secondes=$(( temps % 60 ))
 
-echo ""
+echo " Vous avez réussi l'épreuve de l'eau."
 echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo " Étoiles : ${stars}"
-echo "Code secret de l’EAU : ${digit}"
+echo " Code secret de l’EAU : ${digit}"
 echo ""
 echo "L'AIR t'appelle à présent."
 echo ""
+sleep 2
 echo "Pour accéder à l'épreuve suivante :"
 echo "     cd ../  et accède à la porte air"
 echo "     puis lance : ./air.sh"

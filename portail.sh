@@ -59,7 +59,7 @@ fi
 
 # succès
 echo ""
-echo "Le sceau se fissure… La porte s’ouvre dans un souffle de lumière."
+echo "Le sceau se fissure… La porte s’ouvre dans un souffle de lumière; vous avez sauvez l'univers. Bravo!"
 echo "Code validé : $code"
 echo ""
 
