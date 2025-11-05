@@ -42,7 +42,7 @@ sleep 1
 echo "  - Crée à la racine un fichier dont le nom = la réponse."
 sleep 2
 echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test.txt" . " 
-echo "Evite les majiscules, les accents, utilise le singulier."
+echo " Evite les majuscules, les accents, les espaces et utilise le singulier."
 echo ""
 sleep 3
 echo ""

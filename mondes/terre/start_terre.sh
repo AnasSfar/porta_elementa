@@ -91,56 +91,56 @@ cat > SOS <<'EOF'
 EOF
 
 # Création du dossier de travail (temporaire)
-mkdir -p .terre_temp/REDUCE .terre_temp/REUSE .terre_temp/RECYCLE
+mkdir -p .terre_temp/01.REDUCE .terre_temp/02.REUSE .terre_temp/03.RECYCLE
 
 #  REDUCE 
-cat > .terre_temp/REDUCE/montagne.txt <<'EOF'
+cat > .terre_temp/01.REDUCE/montagne.txt <<'EOF'
 Roche ancienne, stable et fière.
 EOF
 
-cat > .terre_temp/REDUCE/ocean.txt <<'EOF'
+cat > .terre_temp/01.REDUCE/ocean.txt <<'EOF'
 Profondeur calme et bleue.
 EOF
 
-cat > .terre_temp/REDUCE/industrie.txt <<'EOF'
+cat > .terre_temp/01.REDUCE/industrie.txt <<'EOF'
 Fumées, machines et métal froid.
 EOF
 
-cat > .terre_temp/REDUCE/plastique.txt <<'EOF'
+cat > .terre_temp/01.REDUCE/plastique.txt <<'EOF'
 Déchets éternels, morts sans fin.
 EOF
 
-cat > .terre_temp/REDUCE/foret.txt <<'EOF'
+cat > .terre_temp/01.REDUCE/foret.txt <<'EOF'
 Souffle vert et vie silencieuse.
 EOF
 
-cat > .terre_temp/REDUCE/message.txt <<'EOF'
+cat > .terre_temp/01.REDUCE/message.txt <<'EOF'
 Supprime les fichiers qui représentent la pollution et l’industrie.
 Garde seulement les éléments naturels.
 Quand il ne restera que trois fichiers, passe à l’épreuve suivante : REUSE.
 EOF
 
 #  REUSE 
-cat > .terre_temp/REUSE/reused_1.txt <<'EOF'
+cat > .terre_temp/02.REUSE/reused_1.txt <<'EOF'
 Les arbres 
 EOF
 
-cat > .terre_temp/REUSE/reused_2.txt <<'EOF'
+cat > .terre_temp/02.REUSE/reused_2.txt <<'EOF'
 produisent 
 EOF
 
-cat > .terre_temp/REUSE/reused_3.txt <<'EOF'
+cat > .terre_temp/02.REUSE/reused_3.txt <<'EOF'
 de l’air pur.
 EOF
 
-cat > .terre_temp/REUSE/message.txt <<'EOF'
+cat > .terre_temp/02.REUSE/message.txt <<'EOF'
 Il y a trois fichiers contenant des fragments d’une phrase.
 Rassemble-les dans le bon ordre dans un nouveau fichier appelé reuse.txt.
 Quand tu auras fini, passe à l'épreuve RECYCLE.
 EOF
 
 #  RECYCLE 
-cat > .terre_temp/RECYCLE/monde.txt <<'EOF'
+cat > .terre_temp/03.RECYCLE/monde.txt <<'EOF'
 forêt pure
 océan propre
 désert pur
@@ -150,7 +150,7 @@ plastique déchet
 air pur
 EOF
 
-cat > .terre_temp/RECYCLE/message.txt <<'EOF'
+cat > .terre_temp/03.RECYCLE/message.txt <<'EOF'
 Lis le fichier monde.txt.
 Crée un nouveau fichier appelé recycle.txt contenant uniquement les lignes propres et naturelles.
 Ne garde pas celles qui parlent de pollution ou de déchets.
