@@ -52,11 +52,9 @@ if (( temps > LIMITE )); then
 fi
 
 # fichiers attendus dans le répertoire de travail du joueur
-reduce_file="$lab_root/reduce.txt"
 reuse_file="$lab_root/reuse.txt"
-recycle_file="$lab_root/recycle.txt"
+recycle_file="$lab_root/monde.txt"
 
-[[ -f "$reduce_file"  ]] || { echo "Fichier manquant : $(basename "$reduce_file")"; exit 1; }
 [[ -f "$reuse_file"   ]] || { echo "Fichier manquant : $(basename "$reuse_file")";  exit 1; }
 [[ -f "$recycle_file" ]] || { echo "Fichier manquant : $(basename "$recycle_file")"; exit 1; }
 
@@ -70,7 +68,7 @@ if [[ "$user_reuse" != "$expected_reuse" ]]; then
   exit 1
 fi
 
-# --- Vérif RECYCLE (filtrage des impuretés depuis RECYCLE/monde.txt) ---
+# Vérif RECYCLE (filtrage des impuretés depuis RECYCLE/monde.txt)
 monde_src="$lab_root/RECYCLE/monde.txt"
 [[ -f "$monde_src" ]] || { echo "Source manquante : RECYCLE/monde.txt"; exit 1; }
 

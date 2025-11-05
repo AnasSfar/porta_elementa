@@ -154,7 +154,7 @@ cat > .terre_temp/03.RECYCLE/message.txt <<'EOF'
 Lis le fichier monde.txt.
 Crée un nouveau fichier appelé recycle.txt contenant uniquement les lignes propres et naturelles.
 Ne garde pas celles qui parlent de pollution ou de déchets.
-Après avoir fini, crée une archive dans ~porta-elementa/monde/terre avec les trois fichiers reduce.txt , reuse.txt et recycle.txt .
+Après avoir fini, crée une archive dans ~porta-elementa/monde/terre avec les deux fichiers reuse.txt et monde.txt .
 EOF
 
 # Création de l’archive cachée

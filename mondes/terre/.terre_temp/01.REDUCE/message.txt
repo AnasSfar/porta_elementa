@@ -1,3 +1,0 @@
-Supprime les fichiers qui représentent la pollution et l’industrie.
-Garde seulement les éléments naturels.
-Quand il ne restera que trois fichiers, passe à l’épreuve suivante : REUSE.

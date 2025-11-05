@@ -1,3 +1,0 @@
-Il y a trois fichiers contenant des fragments d’une phrase.
-Rassemble-les dans le bon ordre dans un nouveau fichier appelé reuse.txt.
-Quand tu auras fini, passe à l'épreuve RECYCLE.
