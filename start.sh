@@ -21,7 +21,7 @@ echo "Toi seul peux rétablir l’harmonie… ou en prendre le contrôle."
 sleep 2
 echo ""
 echo "Pour y parvenir, tu devras traverser les quatre mondes élémentaires dans cet ordre : feu, eau, air et terre,"
-echo "et en triompher pour obtenir leurs *codes secrets*."
+echo "et en triompher pour obtenir leurs *codes secrets*. N'OUBLIE PAS DE GARDER EN TÊTE LES CODES SECRETS"
 sleep 2
 echo ""
 echo "Une fois réunis, ces codes te permettront d’activer le Portail —"
