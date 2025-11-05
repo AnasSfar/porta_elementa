@@ -1,27 +1,22 @@
 #!/bin/bash
 set -euo pipefail
 
-# chemins (alignés sur le style FEU)
+# chemins
 PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 STATE_ROOT="$PROJECT_DIR/.game_state"
 STATE_DIR="$STATE_ROOT/terre"
 
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
-EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
 STARS_TERRE="$STATE_DIR/stars.txt"
 CODE_TERRE="$STATE_DIR/code_terre.txt"
 TIME_TERRE="$STATE_DIR/time_terre.txt"
-
-mkdir -p "$STATE_DIR"
-date +%H:%M:%S > "$STATE_DIR/depart.txt"
-printf "%s\n" "$(pwd)" > "$STATE_DIR/lab_root.txt"
 
 # barème 
 LIMITE=630          # temps max (10 min 30)
 THREE_STAR_MAX=150 
 TWO_STAR_MAX=300    
-PENALITE=15        
+PENALITE=15         
 
 # utilitaires
 hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600+10#$m*60+10#$s)); }
@@ -30,7 +25,7 @@ hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600+10#$m*60+10#$s)); 
 [[ -f "$LAB_ROOT_FILE" ]] || { echo "⚠️ Lance d'abord l'épreuve de la TERRE."; exit 1; }
 lab_root="$(<"$LAB_ROOT_FILE")"
 
-# OUT (abandon propre)
+# OUT 
 OUT_FLAG="$lab_root/OUT.txt"
 if [[ -f "$OUT_FLAG" ]]; then
   echo "Abandon détecté : $OUT_FLAG"
@@ -55,16 +50,18 @@ if (( temps > LIMITE )); then
   exit 1
 fi
 
-# fichiers attendus dans le répertoire de travail du joueur
-reuse_file="$lab_root/reuse.txt"
-recycle_file="$lab_root/monde.txt"
+# --- Vérif du dossier SAVED ---
+SAVED_DIR="$lab_root/SAVED"
+[[ -d "$SAVED_DIR" ]] || { echo "Dossier SAVED manquant."; exit 1; }
 
-[[ -f "$reuse_file"   ]] || { echo "Fichier manquant : $(basename "$reuse_file")";  exit 1; }
-[[ -f "$recycle_file" ]] || { echo "Fichier manquant : $(basename "$recycle_file")"; exit 1; }
+[[ -f "$SAVED_DIR/reuse.txt" ]] || { echo "reuse.txt manquant dans SAVED."; exit 1; }
+[[ -f "$SAVED_DIR/monde.txt" ]] || { echo "monde.txt manquant dans SAVED."; exit 1; }
+
+echo "✅ Dossier SAVED détecté avec les fichiers attendus."
 
 # --- Vérif REUSE (phrase exacte) ---
 expected_reuse=$'Les arbres \nproduisent \nde l’air pur.'
-user_reuse="$(sed 's/[[:space:]]\+$//' "$reuse_file")"
+user_reuse="$(sed 's/[[:space:]]\+$//' "$SAVED_DIR/reuse.txt")"
 if [[ "$user_reuse" != "$expected_reuse" ]]; then
   echo "reuse.txt incorrect. Vérifie l'ordre/texte exact :"
   echo "Attendu :"
@@ -72,30 +69,20 @@ if [[ "$user_reuse" != "$expected_reuse" ]]; then
   exit 1
 fi
 
-# Vérif RECYCLE (filtrage des impuretés depuis RECYCLE/monde.txt)
-monde_src="$lab_root/RECYCLE/monde.txt"
-[[ -f "$monde_src" ]] || { echo "Source manquante : RECYCLE/monde.txt"; exit 1; }
-
-expected_recycle="$(grep -vE 'pollution|déchet' "$monde_src" | sed 's/[[:space:]]\+$//')"
-user_recycle="$(sed 's/[[:space:]]\+$//' "$recycle_file")"
-if [[ "$user_recycle" != "$expected_recycle" ]]; then
-  echo "recycle.txt incorrect (impuretés restantes ou lignes manquantes)."
-  echo "Attendu (extrait des lignes 'propres' de monde.txt) :"
-  printf "%s\n" "$expected_recycle"
-  exit 1
+# --- Vérif contenu de monde.txt ---
+monde_src="$lab_root/03.RECYCLE/monde.txt"
+if [[ -f "$monde_src" ]]; then
+  expected_recycle="$(grep -E '^(forêt pure|océan propre|désert pur|glacier clair|air pur)$' "$monde_src")"
+  user_recycle="$(cat "$SAVED_DIR/monde.txt")"
+  if [[ "$user_recycle" != "$expected_recycle" ]]; then
+    echo "Contenu de SAVED/monde.txt incorrect (lignes sales ou manquantes)."
+    echo "Attendu :"
+    printf "%s\n" "$expected_recycle"
+    exit 1
+  fi
 fi
 
-# --- Vérif du dossier SAVED ---
-SAVED_DIR="$lab_root/SAVED"
-[[ -d "$SAVED_DIR" ]] || { echo "Dossier SAVED manquant."; exit 1; }
-
-# Fichiers attendus
-[[ -f "$SAVED_DIR/reuse.txt" ]]  || { echo "reuse.txt manquant dans SAVED.";  exit 1; }
-[[ -f "$SAVED_DIR/monde.txt" ]]  || { echo "monde.txt manquant dans SAVED.";  exit 1; }
-
-echo "✅ Dossier SAVED détecté avec les fichiers attendus."
-
-# --- Étoiles (avec éventuelle pénalité cumulée si tu veux l'utiliser) ---
+# --- Étoiles ---
 errors=0
 penalite=$(( errors * PENALITE ))
 effectif=$(( temps + penalite ))
@@ -119,8 +106,9 @@ minutes=$(( temps / 60 ))
 secondes=$(( temps % 60 ))
 
 # Fin
-echo "Épreuve TERRE validée. Vous avez sauvé la terre."
-echo " Temps : ${minutes} minutes et ${secondes} secondes."
+echo "Épreuve TERRE validée. Tu as sauvé la planète."
+echo "Temps : ${minutes} minutes et ${secondes} secondes."
 echo "Étoiles: $stars"
-echo " Votre code secret est : ${digit}"
-echo "Si vous avez fini toutes les épreuves, vous pouvez lancer ./portail.sh dans la racine du jeu et changer le destin de l'univers." 
+echo "Code secret de la TERRE : ${digit}"
+echo ""
+echo "Si tu as terminé toutes les épreuves, lance ./portail.sh dans la racine du jeu pour ouvrir la porte finale."
