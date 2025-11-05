@@ -90,11 +90,16 @@ echo "EAU:$stars" >> "$STARS_EAU"
 echo "$digit" > "$CODE_EAU"
 
 echo ""
-echo " Temps écoulé : ${temps}s (+${errors}×${PENALITE}s de remous) → total ${total}s"
+echo " Temps écoulé : ${temps}s"
 echo " Étoiles : ${stars}"
-
-
-
-
 echo "Code secret de l’EAU : ${digit}"
 echo ""
+echo "L'AIR t'appelle à présent."
+echo ""
+echo "Pour accéder à l'épreuve suivante :"
+echo "     cd ../  et accède à la porte air"
+echo "     puis lance : ./air.sh"
+echo ""
+echo "Que ton esprit reste clair pour libérer l’air."
+echo ""
+
