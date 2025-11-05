@@ -8,6 +8,8 @@ debut=$(date +%s)
 PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 STATE_ROOT="$PROJECT_DIR/.game_state"
 state_dir="$STATE_ROOT/terre"
+
+mkdir -p "$state_dir"
 date +%H:%M:%S > "$state_dir/depart.txt"
 
 # Effet machine à écrire
