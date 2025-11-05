@@ -1,1 +1,1 @@
-lab_feu/comburant/flamme.txt
+lab_feu/combustible/papier/flamme.txt

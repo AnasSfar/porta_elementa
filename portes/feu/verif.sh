@@ -8,7 +8,7 @@ STATE_DIR="$STATE_ROOT/feu"
 
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
-EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
+EXPECTED_FILE="$STATE_DIR/expected_answer.txt"
 STARS_FEU="$STATE_DIR/stars.txt"
 CODE_FEU="$STATE_DIR/code_feu.txt"
 
@@ -22,10 +22,10 @@ PENALITE=15
 hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600+10#$m*60+10#$s)); }
 
 # vérif fichiers
-[[ -f "$EXPECTED_OUT" && -f "$LAB_ROOT_FILE" ]] || { echo "⚠️ Lance d'abord l'épreuve du FEU."; exit 1; }
+[[ -f "$EXPECTED_FILE" && -f "$LAB_ROOT_FILE" ]] || { echo "⚠️ Lance d'abord l'épreuve du FEU."; exit 1; }
 
 # lecture
-expected="$(<"$EXPECTED_OUT")"
+expected="$(<"$EXPECTED_FILE")"
 lab_root="$(<"$LAB_ROOT_FILE")"
 candidate="$lab_root/$expected"
 
