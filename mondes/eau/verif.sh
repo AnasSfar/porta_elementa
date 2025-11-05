@@ -14,7 +14,7 @@ CODE_EAU="$STATE_DIR/code_eau.txt"
 TIME_EAU="$STATE_DIR/time_eau.txt"
 
 # barème
-LIMITE=900 #(15 minutes)
+LIMITE=930 #(15 minutes)
 THREE_STAR_MAX=225
 TWO_STAR_MAX=450
 PENALITE=15

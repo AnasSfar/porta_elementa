@@ -127,5 +127,4 @@ echo "Épreuve TERRE validée. Vous avez sauvé la terre."
 echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo "Étoiles: $stars"
 echo " Votre code secret est : ${digit}"
-
 echo "Si vous avez fini toutes les épreuves, vous pouvez lancer ./portail.sh dans la racine du jeu et changer le destin de l'univers." 
