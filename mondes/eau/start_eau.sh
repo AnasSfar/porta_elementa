@@ -36,7 +36,7 @@ echo ""
 echo "Déroulement :"
 echo "  • Trouve le fichier flots.txt caché dans le labyrinthe."
 echo "  • Il t’indiquera le chemin d’un fichier source.txt que tu devras purifier."
-echo "  • Crée un fichier pur.txt contenant seulement les lignes sans le mot interdit : 'sel'. Il est interdit d'utiliser la commande 'vi'. "
+echo "  • Crée un fichier pur.txt contenant seulement (... -v ... > ...) les lignes sans le mot interdit : 'sel'. Il est interdit d'utiliser la commande 'vi'. "
 echo "  • Déplace ton fichier pur.txt dans la racine du labyrinthe $lab "
 echo ""
 

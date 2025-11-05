@@ -30,10 +30,6 @@ done
 lab_root="$(<"$LAB_ROOT_FILE")"
 player_out="$lab_root/pur.txt"
 
-echo ""
-echo " Les flots se calment..."
-sleep 1
-
 #out
 OUT_FLAG="$lab_root/OUT.txt"
 if [[ -f "$OUT_FLAG" ]]; then
@@ -80,9 +76,9 @@ digit=$(( RANDOM % 10 ))
 #étoiles
 # score
 total=$(( temps + errors * PENALITE ))
-if   (( total <= THREE_STAR_MAX )); then stars=3; echo " L’eau obéit à ta volonté. Elle reflète la pureté de ton esprit."
-elif (( total <= TWO_STAR_MAX ));  then stars=2; echo " Tu as maîtrisé le flot, mais il reste quelques remous."
-else                                stars=1; echo " Tu as purifié l’eau, mais la maîtrise t’échappe encore."
+if   (( total <= THREE_STAR_MAX )); then stars=3;
+elif (( total <= TWO_STAR_MAX ));  then stars=2; 
+else                                stars=1; 
 fi
 
 
