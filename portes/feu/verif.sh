@@ -76,28 +76,31 @@ digit=$(( RANDOM % 10 ))
 
 #étoiles
 total=$(( temps + errors * PENALITE ))
-if   (( total <= THREE_STAR_MAX )); then stars=3; msg="🔥 Tu as dansé avec la flamme sans te brûler."
-elif (( total <= TWO_STAR_MAX ));  then stars=2; msg="🔥 Le feu t'obéit, mais son souffle te dépasse encore."
-else                                stars=1; msg="🔥 Tu as vaincu la flamme, mais à quel prix..."
+if   (( total <= THREE_STAR_MAX )); then stars=3;
+elif (( total <= TWO_STAR_MAX ));  then stars=2;
+else                                stars=1; 
 fi
 # enregistrement
 mkdir -p game_state
 echo "FEU:$stars" >> "$STARS_FEU"
 echo "$digit" > "$CODE_FEU"
 
-# résumé
+# calcul du temps en minutes et secondes
+minutes=$(( temps / 60 ))
+secondes=$(( temps % 60 ))
+
+# réponse
+sleep 2
 echo " Bravo, vous avez réussi l'épreuve du feu!"
-echo " Temps : ${temps}s"
+echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo " Vous avez commis ${errors} erreurs. "
 echo " Vous avez gagnez ${stars} étoiles lors de cette épreuve "
-# score et étoiles
 echo " Votre code secret est : ${digit}"
 echo ""
-sleep 1
+sleep 5
 echo "Le feu s'apaise, et la vapeur s'élève dans l'air..."
 sleep 1
 echo "L'EAU t'appelle à présent."
-echo ""
 echo "Pour accéder à l'épreuve suivante :"
 echo "     cd ../  et accède à la porte eau"
 echo "     puis lance : ./eau.sh"

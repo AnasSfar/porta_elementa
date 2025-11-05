@@ -22,7 +22,7 @@ echo ""
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
 if [[ "${choix,,}" == "out" ]]; then
   echo ""
-  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "Tu t’éloignes de l'oxygène... La flamme s’éteint doucement."
   echo "Épreuve du FEU abandonnée."
   exit 0
 fi
@@ -34,12 +34,12 @@ sleep 2
 echo "Bienvenue, voyageur..."
 echo "Tu viens d’ouvrir la Porte du Feu."
 echo ""
-sleep 3
+sleep 2
 echo "Déroulement du jeu :"
 echo "  🔸 Cherche le fichier flamme.txt caché dans le labyrinthe."
 sleep 2
 echo "  🔸 Lis l’énigme."
-sleep 2
+sleep 1
 echo "  🔸 Crée à la racine un fichier dont le nom = la réponse."
 sleep 2
 echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la racine avec le nom "test" . " 
