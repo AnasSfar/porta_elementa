@@ -22,10 +22,10 @@ PENALITE=15
 hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600+10#$m*60+10#$s)); }
 
 # vérif fichiers
-[[ -f "$EXPECTED_FILE" && -f "$LAB_ROOT_FILE" ]] || { echo "⚠️ Lance d'abord l'épreuve du FEU."; exit 1; }
+[[ -f "$EXPECTED_OUT" && -f "$LAB_ROOT_FILE" ]] || { echo "⚠️ Lance d'abord l'épreuve du FEU."; exit 1; }
 
 # lecture
-expected="$(<"$EXPECTED_FILE")"
+expected="$(<"$EXPECTED_OUT")"
 lab_root="$(<"$LAB_ROOT_FILE")"
 candidate="$lab_root/$expected"
 
