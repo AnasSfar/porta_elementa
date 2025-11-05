@@ -14,8 +14,8 @@ CODE_TERRE="$STATE_DIR/code_terre.txt"
 
 # barème 
 LIMITE=630          # temps max (10 min 30)
-THREE_STAR_MAX=150  # <= 2m30s => ★★★
-TWO_STAR_MAX=300    # <= 5m00s  => ★★
+THREE_STAR_MAX=150 
+TWO_STAR_MAX=300    
 PENALITE=15        
 
 # utilitaires
@@ -116,8 +116,10 @@ mkdir -p "$(dirname "$STARS_FILE")" "$(dirname "$CODE_TERRE")"
 echo "terre:$stars" >> "$STARS_TERRE"
 echo "$digit" > "$CODE_TERRE"
 
-# --- Fin OK ---
+# Fin
 echo "Épreuve TERRE validée."
 echo "Temps: ${temps}s "
 echo "Étoiles: $stars"
 echo " Votre code secret est : ${digit}"
+
+echo "Si vous avez fini toutes les épreuves, vous pouvez lancer ./portail.sh dans la racine du jeu." 
