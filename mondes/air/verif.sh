@@ -93,7 +93,7 @@ secondes=$(( temps % 60 ))
 
 # --- affichage final ---
 echo ""
-echo "Le vent est libre."
+echo "Le vent est libre. Vous avez réussi cette épreuve"
 echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo "Étoiles obtenues : ${stars}"
 
@@ -102,7 +102,7 @@ echo ""
 echo ""
 echo "La TERRE t'appelle à présent"
 echo "Pour accéder à l'épreuve suivante :"
-echo "     cd ../  et accède à la porte terre"
+echo "     cd ../  et accède au monde de la terre"
 echo "     puis lance : ./terre.sh"
 echo ""
 echo "Que ton esprit reste clair pour sauver la terre."

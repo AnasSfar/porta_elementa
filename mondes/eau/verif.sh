@@ -105,7 +105,7 @@ echo "L'AIR t'appelle à présent."
 echo ""
 sleep 2
 echo "Pour accéder à l'épreuve suivante :"
-echo "     cd ../  et accède à la porte air"
+echo "     cd ../  et accède au monde air"
 echo "     puis lance : ./air.sh"
 echo ""
 echo "Que ton esprit reste clair pour libérer l’air."
