@@ -5,11 +5,11 @@ clear
 echo "Bienvenue, voyageur, dans Porta Elementa..."
 echo ""
 sleep 2
-echo "Depuis des siècles, l’équilibre de l'univers reposait sur quatre forces :"
-echo "Le Feu — symbole de volonté et de destruction."
+echo "Depuis des siècles, l’équilibre de l'univers reposait sur quatre mondes :"
+echo "Le Feu — pays de volonté et de destruction."
 echo "L’Eau — source de vie, mais aussi d’oubli."
-echo "L’Air — porteur de liberté et de chaos."
-echo "La Terre — pilier de stabilité et de mémoire."
+echo "L’Air — monde de liberté et de chaos."
+echo "La Terre — capitale de stabilité et de mémoire."
 sleep 4
 echo ""
 echo "Mais aujourd’hui, tout vacille..."
