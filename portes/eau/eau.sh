@@ -89,6 +89,6 @@ sleep 1
 echo ""
 echo "Quand tu auras terminé, lance : ./verif_eau.sh"
 echo ""
-echo "⏱ Tu disposes de 15 minutes  à partir de maintenant."
+echo "⏱ Tu disposes de 15 minutes à partir de maintenant."
 echo "Tu peux vérifier le temps restant en lançant le script ./temps_eau.sh "
 sleep 2
