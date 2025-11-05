@@ -14,6 +14,7 @@ clear
 echo ""
 echo "PORTE DE L'AIR — ÉPREUVE 3"
 echo ""
+
 # option OUT initial
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
 if [[ "${choix,,}" == "out" ]]; then
