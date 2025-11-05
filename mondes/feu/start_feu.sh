@@ -80,6 +80,6 @@ echo "$lab"     > "$state_dir/lab_root.txt"
 
 echo " Racine : $lab"
 echo " Attention, tu as 10 minutes à partir de maintenant. "
-echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
+echo " Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
 sleep 2
 
