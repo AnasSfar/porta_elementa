@@ -158,7 +158,7 @@ Après avoir fini, crée une archive dans ~porta-elementa/monde/terre avec les t
 EOF
 
 # Création de l’archive cachée
-tar -cf .terre_hidden.tar -C .terre_temp REDUCE REUSE RECYCLE
+tar -cf .terre_hidden.tar -C .terre_temp 01.REDUCE 02.REUSE 03.RECYCLE
 
 # Nettoyage du dossier temporaire
 rm -rf .terre_temp
