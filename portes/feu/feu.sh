@@ -11,6 +11,7 @@ state_dir="$STATE_ROOT/feu"
 lab="lab_feu"
 mkdir -p "$state_dir"
 
+date +%H:%M:%S > "$state_dir/depart.txt"
 
 
 # intro
@@ -48,7 +49,6 @@ echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
 sleep 2
 echo ""
 echo " Attention, tu as 10 minutes à partir de maintenant. "
-date +%H:%M:%S > "$state_dir/depart.txt"
 
 # labyrinthe
 lab="lab_feu"
