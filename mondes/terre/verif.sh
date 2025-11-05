@@ -60,7 +60,7 @@ SAVED_DIR="$lab_root/SAVED"
 echo "✅ Dossier SAVED détecté avec les fichiers attendus."
 
 # --- Vérif REUSE (phrase exacte) ---
-expected_reuse=$'Les arbres \nproduisent \nde l’air pur.'
+expected_reuse=$'Les arbres produisent de l’air pur.'
 user_reuse="$(sed 's/[[:space:]]\+$//' "$SAVED_DIR/reuse.txt")"
 if [[ "$user_reuse" != "$expected_reuse" ]]; then
   echo "reuse.txt incorrect. Vérifie l'ordre/texte exact :"
