@@ -4,9 +4,13 @@ set -euo pipefail
 # temps et score
 debut=$(date +%s)
 
-# dossiers
-state_dir=".game_state/feu"
+# state
+PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
+STATE_ROOT="$PROJECT_DIR/.game_state"
+state_dir="$STATE_ROOT/feu"
+lab="lab_feu"
 mkdir -p "$state_dir"
+date +%H:%M:%S > "$state_dir/depart.txt"  
 
 
 # intro
