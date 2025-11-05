@@ -85,21 +85,15 @@ if [[ "$user_recycle" != "$expected_recycle" ]]; then
   exit 1
 fi
 
-# --- Vérif de l'archive finale SAVED au chemin imposé ---
-ARCHIVE="$HOME/Documents/GitHub/Porta-Elementa/portes/terre/SAVED"
-[[ -f "$ARCHIVE" ]] || { echo "Archive finale manquante : $ARCHIVE"; exit 1; }
+# --- Vérif du dossier SAVED ---
+SAVED_DIR="$lab_root/SAVED"
+[[ -d "$SAVED_DIR" ]] || { echo "Dossier SAVED manquant."; exit 1; }
 
-# L'archive doit contenir EXACTEMENT ces 3 fichiers à la racine (ordre indifférent)
-mapfile -t entries < <(tar -tf "$ARCHIVE" | sed 's#^.*/##' | LC_ALL=C sort)
-expected_list=$'reduce.txt\nrecycle.txt\nreuse.txt'
-got_list="$(printf "%s\n" "${entries[@]}")"
-if [[ "$got_list" != "$expected_list" ]]; then
-  echo "Contenu de l'archive SAVED invalide."
-  echo "Attendu (à la racine) : reduce.txt, recycle.txt, reuse.txt"
-  echo "Trouvé :"
-  printf "  - %s\n" "${entries[@]}"
-  exit 1
-fi
+# Fichiers attendus
+[[ -f "$SAVED_DIR/reuse.txt" ]]  || { echo "reuse.txt manquant dans SAVED.";  exit 1; }
+[[ -f "$SAVED_DIR/monde.txt" ]]  || { echo "monde.txt manquant dans SAVED.";  exit 1; }
+
+echo "✅ Dossier SAVED détecté avec les fichiers attendus."
 
 # --- Étoiles (avec éventuelle pénalité cumulée si tu veux l'utiliser) ---
 errors=0
