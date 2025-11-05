@@ -10,7 +10,7 @@ STATE_ROOT="$PROJECT_DIR/.game_state"
 state_dir="$STATE_ROOT/feu"
 lab="lab_feu"
 mkdir -p "$state_dir"
-date +%H:%M:%S > "$state_dir/depart.txt"  
+
 
 
 # intro
@@ -36,8 +36,8 @@ sleep 3
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
 if [[ "${choix,,}" == "out" ]]; then
   echo ""
-  echo "💨 Tu t’éloignes du brasier... La flamme s’éteint doucement."
-  echo "🔥 Épreuve du FEU abandonnée."
+  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "Épreuve du FEU abandonnée."
   exit 0
 fi
 
