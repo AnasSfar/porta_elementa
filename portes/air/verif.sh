@@ -9,7 +9,7 @@ STATE_DIR="$STATE_ROOT/air"
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_PHRASE_FILE="$STATE_DIR/expected_phrase.txt"
-STARS_FILE="$STATE_DIR/stars.txt"
+STARS_AIR="$STATE_DIR/stars.txt"
 CODE_AIR="$STATE_DIR/code_air.txt"
 
 # --- barème ---
