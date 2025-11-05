@@ -13,9 +13,9 @@ STARS_TERRE="$STATE_DIR/stars.txt"
 CODE_TERRE="$STATE_DIR/code_terre.txt"
 TIME_TERRE="$STATE_DIR/time_terre.txt"
 
-mkdir -p "$state_dir"
-date +%H:%M:%S > "$state_dir/depart.txt"
-printf "%s\n" "$(pwd)" > "$state_dir/lab_root.txt"
+mkdir -p "$STATE_DIR"
+date +%H:%M:%S > "$STATE_DIR/depart.txt"
+printf "%s\n" "$(pwd)" > "$STATE_DIR/lab_root.txt"
 
 # barème 
 LIMITE=630          # temps max (10 min 30)
