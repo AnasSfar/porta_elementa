@@ -10,9 +10,7 @@ STATE_ROOT="$PROJECT_DIR/.game_state"
 state_dir="$STATE_ROOT/feu"
 lab="lab_feu"
 mkdir -p "$state_dir"
-
 date +%H:%M:%S > "$state_dir/depart.txt"
-
 
 # intro
 clear
