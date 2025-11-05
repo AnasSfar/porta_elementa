@@ -1,7 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-state_dir=".game_state/eau"
+PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
+STATE_ROOT="$PROJECT_DIR/.game_state"
+state_dir="$STATE_ROOT/eau"
 depart_file="$state_dir/depart.txt"
 limite=600  # 10 minutes
 

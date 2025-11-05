@@ -2,7 +2,9 @@
 set -euo pipefail
 
 # state
-state_dir=".game_state/eau"
+PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
+STATE_ROOT="$PROJECT_DIR/.game_state"
+state_dir="$STATE_ROOT/eau"
 lab="lab_eau"
 mkdir -p "$state_dir"
 date +%H:%M:%S > "$state_dir/depart.txt"  

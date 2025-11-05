@@ -2,12 +2,15 @@
 set -euo pipefail
 
 # chemins
-STATE_DIR=".game_state/eau"
+PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
+STATE_ROOT="$PROJECT_DIR/.game_state"
+STATE_DIR="$STATE_ROOT/eau"
+
 LAB_ROOT_FILE="$STATE_DIR/lab_root.txt"
 START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
-STARS_FILE="game_state/stars.txt"
-CODE_EAU="game_state/code_eau.txt"
+STARS_EAU="$STATE_DIR/stars.txt"
+CODE_EAU="$STATE_DIR/code_eau.txt"
 
 # barème
 LIMITE=900 #(15 minutes)
@@ -83,7 +86,7 @@ fi
 
 # sauvegarde
 mkdir -p game_state
-echo "EAU:$stars" >> "$STARS_FILE"
+echo "EAU:$stars" >> "$STARS_EAU"
 echo "$digit" > "$CODE_EAU"
 
 echo ""
