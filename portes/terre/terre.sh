@@ -25,6 +25,19 @@ clear
 type_out "PORTE DE LA TERRE - ÉPREUVE 4" 0.05
 sleep 1.5
 
+# option OUT initial
+read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
+if [[ "${choix,,}" == "out" ]]; then
+  echo ""
+  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "Épreuve du FEU abandonnée."
+  exit 0
+fi
+sleep 2
+echo ""
+sleep 2
+
+
 type_out "BiENveNueeeeeeeeeeeeeeeeeee chER joUeUUUr" 0.04
 sleep 1.5
 
@@ -71,6 +84,10 @@ sleep 0.8
 
 type_out "si tu le trouves... tu sauras où commencer... SOS"
 sleep 1
+
+type_out "Tu as 20 minutes pour ... m'aider ..."
+type_out "Tu peux vérifier le temps restant en lançant le script ./temps_terre.sh "
+
 
 date +%H:%M:%S > "$state_dir/depart.txt"
 

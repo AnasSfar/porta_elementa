@@ -13,8 +13,17 @@ clear
 echo ""
 echo "PORTE DE L'EAU — ÉPREUVE 2"
 sleep 1
+# option OUT initial
+read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
+if [[ "${choix,,}" == "out" ]]; then
+  echo ""
+  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "Épreuve du FEU abandonnée."
+  exit 0
+fi
+sleep 2
+
 echo "À tout moment, tu peux quitter en créant le fichier : lab_eau/OUT.txt puis lancer le scirpt ./verif.sh "
-echo "Tu peux vérifier le temps restant en lançant le script ./temps_eau.sh "
 echo ""
 echo "Les flots s'agitent doucement alors que tu approches."
 echo "Une voix fluide résonne dans ton esprit :"
@@ -31,6 +40,7 @@ echo "  • Garde SEULEMENT les lignes sans le mot 'sel' (insensible à la casse
 echo "  • Crée à la racine de '$lab' un fichier nommé pur.txt contenant l’eau filtrée."
 echo ""
 echo "⏱ Tu disposes de 15 minutes."
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_eau.sh "
 sleep 2
 
 # lab

@@ -18,6 +18,19 @@ date +%H:%M:%S > "$state_dir/depart.txt"
 clear
 echo "PORTE DU FEU — ÉPREUVE 1"
 echo ""
+# option OUT initial
+read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
+if [[ "${choix,,}" == "out" ]]; then
+  echo ""
+  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "Épreuve du FEU abandonnée."
+  exit 0
+fi
+sleep 2
+echo "À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt puis lancer le scirpt ./verif.sh "
+echo ""
+echo ""
+sleep 2
 echo "Bienvenue, voyageur..."
 echo "Tu viens d’ouvrir la Porte du Feu."
 echo ""
@@ -33,22 +46,12 @@ echo " Par exemple, la bonne réponse est "test", le fichier sera crée à la ra
 echo ""
 sleep 3
 
-# option OUT initial
-read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
-if [[ "${choix,,}" == "out" ]]; then
-  echo ""
-  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
-  echo "Épreuve du FEU abandonnée."
-  exit 0
-fi
 
-sleep 2
 
-echo "À tout moment, tu peux quitter en créant le fichier : lab_feu/OUT.txt puis lancer le scirpt ./verif.sh "
-echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
-sleep 2
 echo ""
 echo " Attention, tu as 10 minutes à partir de maintenant. "
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_feu.sh "
+sleep 2
 
 # labyrinthe
 lab="lab_feu"

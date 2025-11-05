@@ -12,11 +12,11 @@ EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
 STARS_TERRE="$STATE_DIR/stars.txt"
 CODE_TERRE="$STATE_DIR/code_terre.txt"
 
-# barème (mêmes seuils que FEU)
+# barème 
 LIMITE=630          # temps max (10 min 30)
 THREE_STAR_MAX=150  # <= 2m30s => ★★★
 TWO_STAR_MAX=300    # <= 5m00s  => ★★
-PENALITE=15         # pénalité (s) par erreur (si tu veux en compter)
+PENALITE=15        
 
 # utilitaires
 hms_to_sec(){ IFS=: read -r h m s <<<"$1"; echo $((10#$h*3600+10#$m*60+10#$s)); }

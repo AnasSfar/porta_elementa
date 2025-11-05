@@ -14,13 +14,25 @@ clear
 echo ""
 echo "PORTE DE L'AIR — ÉPREUVE 3"
 echo ""
+# option OUT initial
+read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
+if [[ "${choix,,}" == "out" ]]; then
+  echo ""
+  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
+  echo "Épreuve du FEU abandonnée."
+  exit 0
+fi
+sleep 2
 echo "À tout moment, tu peux quitter en créant le fichier : lab_air/OUT.txt puis lancer le scirpt ./verif.sh "
-echo "Tu peux vérifier le temps restant en lançant le script ./temps_air.sh "
+echo ""
+sleep 2
+
 echo "Cher voyaguer, le vent est prisonnier d’un labyrinthe invisible."
 echo "Lis les couloirs dans l’ordre indiqué par les indices et libère-le."
 echo ""
 echo "Quand tu penses avoir fini, tu pourras lancer : ./verif_air.sh"
 echo "Tu as 20 minutes pour libérer l'air."
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_air.sh "
 
 # labyrinthe
 rm -rf "$lab" #supprime tout ancien labyrinthe
