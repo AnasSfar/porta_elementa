@@ -94,7 +94,7 @@ done
 
 minutes=$(( total_time / 60 ))
 seconds=$(( total_time % 60 ))
-echo "⏱️  Temps total des épreuves : ${minutes} min ${seconds} s"
+echo "Temps total des épreuves : ${minutes} min ${seconds} s"
 echo ""
 
 echo "Au-delà de cette porte, un nouveau voyage commence."
