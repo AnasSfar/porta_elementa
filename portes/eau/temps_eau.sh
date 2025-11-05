@@ -5,7 +5,7 @@ PROJECT_DIR="$(cd "$(dirname "$0")/../.."; pwd)"
 STATE_ROOT="$PROJECT_DIR/.game_state"
 state_dir="$STATE_ROOT/eau"
 depart_file="$state_dir/depart.txt"
-limite=600  # 10 minutes
+limite=620  # 10 minutes
 
 if [[ ! -f "$depart_file" ]]; then
   echo "⚠️  Aucune épreuve en cours ou non commencée."

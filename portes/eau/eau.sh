@@ -39,9 +39,7 @@ echo "  • Il t’indiquera le chemin d’un fichier source.txt."
 echo "  • Garde SEULEMENT les lignes sans le mot 'sel' (insensible à la casse)."
 echo "  • Crée à la racine de '$lab' un fichier nommé pur.txt contenant l’eau filtrée."
 echo ""
-echo "⏱ Tu disposes de 15 minutes."
-echo "Tu peux vérifier le temps restant en lançant le script ./temps_eau.sh "
-sleep 2
+
 
 # lab
 rm -rf "$lab"
@@ -91,3 +89,6 @@ sleep 1
 echo ""
 echo "Quand tu auras terminé, lance : ./verif_eau.sh"
 echo ""
+echo "⏱ Tu disposes de 15 minutes  à partir de maintenant."
+echo "Tu peux vérifier le temps restant en lançant le script ./temps_eau.sh "
+sleep 2
