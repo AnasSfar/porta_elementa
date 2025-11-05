@@ -29,39 +29,30 @@ sleep 1.5
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
 if [[ "${choix,,}" == "out" ]]; then
   echo ""
-  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
-  echo "Épreuve du FEU abandonnée."
+  echo "Tu as choisi de quitter cette épreuve... La terre subit plus de dégâts..."
+  echo "Épreuve de la TERRE abandonnée."
   exit 0
 fi
 sleep 2
 echo ""
 sleep 2
 
-
 type_out "BiENveNueeeeeeeeeeeeeeeeeee chER joUeUUUr" 0.04
 sleep 1.5
-
 type_out "..." 0.2
 sleep 0.5
-
 type_out "Je Sui-" 0.05
 sleep 0.5
-
 type_out "Je SuiS La TeRRRRe- l'homme m'a-" 0.04
 sleep 0.5
-
 type_out "détruit" 0.06
 sleep 0.5
-
 type_out "L'homme m'a ren/inversé avec ses actions..." 0.04
 sleep 0.5
-
 type_out "Trop de CO2..." 0.05
 sleep 0.5
-
 type_out "Trop de méchaaaaanceté..." 0.05
 sleep 0.5
-
 type_out "Tu dois me sauver." 0.04
 sleep 0.5
 type_out "..."
@@ -100,7 +91,7 @@ EOF
 # Création du dossier de travail (temporaire)
 mkdir -p .terre_temp/REDUCE .terre_temp/REUSE .terre_temp/RECYCLE
 
-# ---------- REDUCE ----------
+#  REDUCE 
 cat > .terre_temp/REDUCE/montagne.txt <<'EOF'
 Roche ancienne, stable et fière.
 EOF
@@ -127,7 +118,7 @@ Garde seulement les éléments naturels.
 Quand il ne restera que trois fichiers, passe à l’épreuve suivante : REUSE.
 EOF
 
-# ---------- REUSE ----------
+#  REUSE 
 cat > .terre_temp/REUSE/reused_1.txt <<'EOF'
 Les arbres 
 EOF
@@ -146,7 +137,7 @@ Rassemble-les dans le bon ordre dans un nouveau fichier appelé reuse.txt.
 Quand tu auras fini, passe à l'épreuve RECYCLE.
 EOF
 
-# ---------- RECYCLE ----------
+#  RECYCLE 
 cat > .terre_temp/RECYCLE/monde.txt <<'EOF'
 forêt pure
 océan propre
@@ -164,8 +155,8 @@ Ne garde pas celles qui parlent de pollution ou de déchets.
 Après avoir fini, crée une archive dans ~porta-elementa/portes/terre avec les trois fichiers reduce.txt , reuse.txt et recycle.txt .
 EOF
 
-# ---------- Création de l’archive cachée ----------
+# Création de l’archive cachée
 tar -cf .terre_hidden.tar -C .terre_temp REDUCE REUSE RECYCLE
 
-# ---------- Nettoyage du dossier temporaire ----------
+# Nettoyage du dossier temporaire
 rm -rf .terre_temp
