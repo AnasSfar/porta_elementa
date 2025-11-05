@@ -18,8 +18,8 @@ echo ""
 read -rp "Souhaites-tu continuer ? (Entrée pour continuer, ou tape OUT pour quitter) : " choix
 if [[ "${choix,,}" == "out" ]]; then
   echo ""
-  echo "Tu t’éloignes du brasier... La flamme s’éteint doucement."
-  echo "Épreuve du FEU abandonnée."
+  echo "Tu as décidé de quitter l'épreuve."
+  echo "Épreuve de l'AIR abandonnée."
   exit 0
 fi
 sleep 2
