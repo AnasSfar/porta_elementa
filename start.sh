@@ -38,8 +38,8 @@ echo "Ton score dépendra du *temps écoulé* et de tes *erreurs*."
 sleep 2
 echo ""
 echo "À tout moment, tu peux consulter le temps restant pour ton épreuve avec :"
-echo "    ./temps_elem.sh <élément>"
-echo "Exemple : ./temps_elem.sh feu"
+echo "    ./temps_elem.sh ou elem : feu, eau, air, terre"
+echo "Exemple : ./temps_feu.sh"
 sleep 2
 echo ""
 echo "L’avenir du monde repose désormais entre tes mains."

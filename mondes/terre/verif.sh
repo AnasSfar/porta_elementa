@@ -11,6 +11,7 @@ START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
 STARS_TERRE="$STATE_DIR/stars.txt"
 CODE_TERRE="$STATE_DIR/code_terre.txt"
+TIME_TERRE = "$STATE_DIR/time_terre.txt"
 
 # barème 
 LIMITE=630          # temps max (10 min 30)
@@ -115,6 +116,7 @@ digit=$(( RANDOM % 10 ))
 mkdir -p "$(dirname "$STARS_FILE")" "$(dirname "$CODE_TERRE")"
 echo "terre:$stars" >> "$STARS_TERRE"
 echo "$digit" > "$CODE_TERRE"
+echo "$temps" > "$TIME_TERRE"
 
 # Fin
 echo "Épreuve TERRE validée."
