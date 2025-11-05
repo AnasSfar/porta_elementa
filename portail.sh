@@ -81,5 +81,21 @@ fi
 echo "Étoiles totales : $total"
 echo "Rang : $rank"
 echo ""
+
+#temps
+total_time=0
+for elem in feu eau air terre; do
+  file=".game_state/${elem}/time_${elem}.txt"
+  if [[ -f "$file" ]]; then
+    t=$(<"$file")
+    total_time=$(( total_time + t ))
+  fi
+done
+
+minutes=$(( total_time / 60 ))
+seconds=$(( total_time % 60 ))
+echo "⏱️  Temps total des épreuves : ${minutes} min ${seconds} s"
+echo ""
+
 echo "Au-delà de cette porte, un nouveau voyage commence."
 echo ""

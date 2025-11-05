@@ -118,9 +118,13 @@ echo "terre:$stars" >> "$STARS_TERRE"
 echo "$digit" > "$CODE_TERRE"
 echo "$temps" > "$TIME_TERRE"
 
+# calcul du temps en minutes et secondes
+minutes=$(( temps / 60 ))
+secondes=$(( temps % 60 ))
+
 # Fin
 echo "Épreuve TERRE validée."
-echo "Temps: ${temps}s "
+echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo "Étoiles: $stars"
 echo " Votre code secret est : ${digit}"
 

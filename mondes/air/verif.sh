@@ -11,6 +11,7 @@ START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_PHRASE_FILE="$STATE_DIR/expected_phrase.txt"
 STARS_AIR="$STATE_DIR/stars.txt"
 CODE_AIR="$STATE_DIR/code_air.txt"
+TIME_AIR="$STATE_DIR/time_air.txt"
 
 # --- barème ---
 LIMITE=1230        # 20 min
@@ -84,11 +85,16 @@ symbol=$(( RANDOM % 10 ))
 mkdir -p "$STATE_DIR"
 echo "AIR:${stars}" >> "$STARS_AIR"
 echo "$symbol" > "$CODE_AIR"
+echo "$temps" > "$TIME_AIR"
+
+# calcul du temps en minutes et secondes
+minutes=$(( temps / 60 ))
+secondes=$(( temps % 60 ))
 
 # --- affichage final ---
 echo ""
 echo "Le vent est libre."
-echo "Temps : ${temps}s "
+echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo "Étoiles obtenues : ${stars}"
 
 echo "Code secret de l’AIR : ${symbol}"

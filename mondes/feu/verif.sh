@@ -11,6 +11,8 @@ START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_FILE="$STATE_DIR/expected_answer.txt"
 STARS_FEU="$STATE_DIR/stars.txt"
 CODE_FEU="$STATE_DIR/code_feu.txt"
+TIME_FEU="$STATE_DIR/time_feu.txt"
+
 
 # barème
 LIMITE=630          # temps max (10 min)
@@ -84,6 +86,7 @@ fi
 mkdir -p game_state
 echo "FEU:$stars" >> "$STARS_FEU"
 echo "$digit" > "$CODE_FEU"
+echo "$temps" > "$TIME_FEU"
 
 # calcul du temps en minutes et secondes
 minutes=$(( temps / 60 ))

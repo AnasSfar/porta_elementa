@@ -11,6 +11,7 @@ START_HMS_FILE="$STATE_DIR/depart.txt"
 EXPECTED_OUT="$STATE_DIR/expected_pur.txt"
 STARS_EAU="$STATE_DIR/stars.txt"
 CODE_EAU="$STATE_DIR/code_eau.txt"
+TIME_EAU="$STATE_DIR/time_eau.txt"
 
 # barème
 LIMITE=900 #(15 minutes)
@@ -84,13 +85,19 @@ elif (( total <= TWO_STAR_MAX ));  then stars=2; echo " Tu as maîtrisé le flot
 else                                stars=1; echo " Tu as purifié l’eau, mais la maîtrise t’échappe encore."
 fi
 
+
 # sauvegarde
 mkdir -p game_state
 echo "EAU:$stars" >> "$STARS_EAU"
 echo "$digit" > "$CODE_EAU"
+echo "$temps" > "$TIME_EAU"
+
+# calcul du temps en minutes et secondes
+minutes=$(( temps / 60 ))
+secondes=$(( temps % 60 ))
 
 echo ""
-echo " Temps écoulé : ${temps}s"
+echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo " Étoiles : ${stars}"
 echo "Code secret de l’EAU : ${digit}"
 echo ""
