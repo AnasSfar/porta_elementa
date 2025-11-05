@@ -94,7 +94,7 @@ secondes=$(( temps % 60 ))
 
 # réponse
 sleep 2
-echo " Bravo, vous avez réussi l'épreuve du feu!"
+echo " Bravo, vous avez réussi l'épreuve du feu !"
 echo " Temps : ${minutes} minutes et ${secondes} secondes."
 echo " Vous avez commis ${errors} erreurs. "
 echo " Vous avez gagnez ${stars} étoiles lors de cette épreuve "
