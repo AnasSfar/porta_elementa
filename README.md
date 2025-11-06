@@ -20,7 +20,7 @@ Réunis-les pour tenter d’ouvrir la **Porte des Éléments** !
 
 ## ⏱️ Règles du jeu
 
-Chaque épreuve dure **10 minutes maximum**.  
+Chaque épreuve dure un certain temps qui est indiqué quand tu lance son script. 
 Si le temps s’écoule, **il suffit de recommencer l’épreuve concernée** (le reste de ta progression est conservé).  
 
 Tu obtiens **1 à 3 étoiles** selon ta rapidité et ta précision.  
@@ -35,7 +35,6 @@ Quand tu as les quatre symboles :
 
 ## 🔮 Philosophie du jeu
 
-> Ici, on ne perd jamais.  
 > On apprend, on observe, on se transforme.  
 > Le véritable but n’est pas la victoire,  
 > mais la compréhension de l’équilibre entre les éléments.  
@@ -61,17 +60,12 @@ Quand tu as terminé les quatre épreuves, retourne à la racine du jeu :
 cd ~/porta_elementa
 ```
 
-Assure-toi que le fichier `portail.sh` est exécutable :
-```bash
-chmod +x portail.sh
-```
-
 Puis ouvre le portail :
 ```bash
 ./portail.sh
 ```
 
 Entre la combinaison secrète obtenue grâce aux quatre éléments 🔥💧🌬️🌍  
-Si elle est correcte, le **Portail s’ouvrira** et révélera ton **titre final**.
+Si elle est correcte, le **Portail s’ouvrira**, tu sauuveras l'univers et le jeu te révélera ton **titre final**.
 
 ---
