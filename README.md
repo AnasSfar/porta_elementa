@@ -18,11 +18,32 @@ Réunis-les pour tenter d’ouvrir la **Porte des Éléments** !
 
 ---
 
-## ⏱️ Règles du jeu
+## ⏱️ Règles et lancement du jeu
 
-Il faut suivre cet ordre précis en parcourant les mondes : Feu, Eau, Air, Terre. 
+Assure toi d'être dans la racine du jeu :
+
+```bash
+cd ~/porta_elementa
+```
+
+Une fois dedans, lance le script ./start.sh :
+
+```bash
+./start.sh
+```
+
+Le jeu t'indiquera que faire et comment.
+Il est crucial de suivre cet ordre précis en parcourant les mondes : Feu, Eau, Air, Terre. 
+
 Chaque épreuve dure un certain temps qui est indiqué quand tu lance son script. 
 Si le temps s’écoule, **il suffit de recommencer l’épreuve concernée** (le reste de ta progression est conservé).  
+
+Tu pourras vérifier le temps qui te reste en lançant le script ./temps_elem.sh ou elem = feu, eau, air, terre.
+Par exemple, pour vérifier le temps qui te reste pour l'épreuve du feu :
+
+```bash
+./temps_feu.sh
+```
 
 Tu obtiens **1 à 3 étoiles** selon ta rapidité et ta précision.  
 À la fin de chaque épreuve, tu reçois **un chiffre secret**.  
@@ -53,7 +74,7 @@ elles mesurent aussi ta **maîtrise intérieure**.
 
 ---
 
-## 🗝️ Ouvrir la Porte des Éléments
+## 🗝️ Ouvrir la Porte des Éléments (Le Portail)
 
 Quand tu as terminé les quatre épreuves, retourne à la racine du jeu :
 
