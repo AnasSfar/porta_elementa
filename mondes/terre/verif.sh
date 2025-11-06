@@ -57,7 +57,6 @@ SAVED_DIR="$lab_root/SAVED"
 [[ -f "$SAVED_DIR/reuse.txt" ]] || { echo "reuse.txt manquant dans SAVED."; exit 1; }
 [[ -f "$SAVED_DIR/monde.txt" ]] || { echo "monde.txt manquant dans SAVED."; exit 1; }
 
-echo "✅ Dossier SAVED détecté avec les fichiers attendus."
 
 # --- Vérif REUSE (phrase exacte) ---
 expected_reuse="Les arbres produisent de l'air pur."
