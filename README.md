@@ -20,6 +20,7 @@ Réunis-les pour tenter d’ouvrir la **Porte des Éléments** !
 
 ## ⏱️ Règles du jeu
 
+Il faut suivre cet ordre précis en parcourant les mondes : Feu, Eau, Air, Terre. 
 Chaque épreuve dure un certain temps qui est indiqué quand tu lance son script. 
 Si le temps s’écoule, **il suffit de recommencer l’épreuve concernée** (le reste de ta progression est conservé).  
 
